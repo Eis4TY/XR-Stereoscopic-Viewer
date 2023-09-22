@@ -12,4 +12,10 @@ Bring the experience of the Photos App in Apple Vision Pro to the META Quest ser
 - [ ] Advanced blur effect
 - [ ] spatial UI
 
-* System version V56 or later is recommended
+## Requirements
+* Meta Quest 2 / Pro
+* Enable developer mode (you can follow these instructions).
+* Device system version V56 or later is recommended
+
+## Acknowledgements
+Thanks to @Mr.Maginary for the stereoscopic photos.
