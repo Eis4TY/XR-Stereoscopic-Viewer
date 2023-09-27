@@ -24,17 +24,21 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: c752ab5c9483a5f44841ff55abf42c4c, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
+        m_Texture: {fileID: 2800000, guid: 06893b6583d27ea45adee7ed10e816c7, type: 3}
+        m_Scale: {x: 0.5, y: 1}
+        m_Offset: {x: 0.5, y: 0}
     - _MaskTex:
         m_Texture: {fileID: 2800000, guid: 139b6df6a2b5493439c16ba60b4efc6f, type: 3}
-        m_Scale: {x: 10.8, y: -1.83}
-        m_Offset: {x: 0.7, y: 0.11}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2D:
+        m_Texture: {fileID: 2800000, guid: 06893b6583d27ea45adee7ed10e816c7, type: 3}
+        m_Scale: {x: 0.5, y: 1}
+        m_Offset: {x: 0.5, y: 0}
     m_Ints: []
     m_Floats:
     - _BlurAmount: 15
-    - _BlurPixel: 100
+    - _BlurPixel: 16
     - _BlurSize: 0
     - _BlurStrength: 1.79
     - _Brightness: 0.25

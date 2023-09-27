@@ -1,0 +1,74 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.Video;
+using UnityEngine.UI;
+using UnityEngine.Networking;
+
+
+
+public class ClickControl : MonoBehaviour
+{
+    private ContentControl contentControl;
+    private GameObject content;
+
+    private void Start()
+    {
+        content = GameObject.Find("Content");
+        contentControl = content.GetComponent<ContentControl>();
+    }
+
+
+    public void SetContent()
+    {
+        MediaAttributes mediaAttributes = this.GetComponent<MediaAttributes>();
+        string url = mediaAttributes.ImagePath;
+        
+        if (mediaAttributes.IsVideo)
+        {
+            contentControl.Set_isVideo(true);
+            contentControl.Set_videoURL(url);
+        }
+        else
+        {
+            contentControl.Set_isVideo(false);
+            if (gameObject.GetComponent<MediaAttributes>().HasDepth)
+            {
+                string url_D = mediaAttributes.DepthPath;
+                contentControl.isDepth = true;
+                StartCoroutine(DownloadTexture_D(url_D));
+            }
+            else
+            {
+                contentControl.isDepth = false;
+            }
+
+            // 应用新纹理
+            StartCoroutine(DownloadTexture(url));
+        }
+    }
+
+
+    private IEnumerator DownloadTexture(string Url) //加载图片
+    {
+        using (UnityWebRequest uwr = UnityWebRequestTexture.GetTexture(Url))
+        {
+            yield return uwr.SendWebRequest();
+            // 获取下载的纹理
+            Texture2D downloadedTexture = DownloadHandlerTexture.GetContent(uwr);
+            // 应用新纹理
+            contentControl.Set_img(downloadedTexture);
+        }
+    }
+    private IEnumerator DownloadTexture_D(string Url) //加载深度图片
+    {
+        using (UnityWebRequest uwr = UnityWebRequestTexture.GetTexture(Url))
+        {
+            yield return uwr.SendWebRequest();
+            // 获取下载的纹理
+            Texture2D downloadedTexture = DownloadHandlerTexture.GetContent(uwr);
+            // 应用新纹理
+            contentControl.Set_imgDeep(downloadedTexture);
+        }
+    }
+}

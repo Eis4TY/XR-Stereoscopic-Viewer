@@ -22,7 +22,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>Temp\Bin\Debug\</OutputPath>
-    <DefineConstants>UNITY_2022_3_9;UNITY_2022_3;UNITY_2022;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_2021_1_OR_NEWER;UNITY_2021_2_OR_NEWER;UNITY_2021_3_OR_NEWER;UNITY_2022_1_OR_NEWER;UNITY_2022_2_OR_NEWER;UNITY_2022_3_OR_NEWER;UNITY_INCLUDE_TESTS;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_NATIVE_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_EDITOR_GAME_SERVICES;ENABLE_UNITY_GAME_SERVICES_ANALYTICS_SUPPORT;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_GENERATE_NATIVE_PLUGINS_FOR_ASSEMBLIES_API;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_RUNTIME_PERMISSIONS;ENABLE_ENGINE_CODE_STRIPPING;ENABLE_ONSCREEN_KEYBOARD;ENABLE_MANAGED_UNITYTLS;INCLUDE_DYNAMIC_GI;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;ENABLE_VIDEO;ENABLE_ACCELERATOR_CLIENT_DEBUGGING;ENABLE_NAVIGATION_PACKAGE_DEBUG_VISUALIZATION;ENABLE_NAVIGATION_HEIGHTMESH_RUNTIME_SUPPORT;ENABLE_NAVIGATION_UI_REQUIRES_PACKAGE;PLATFORM_ANDROID;TEXTCORE_1_0_OR_NEWER;UNITY_ANDROID;UNITY_ANDROID_API;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;UNITY_CAN_SHOW_SPLASH_SCREEN;UNITY_HAS_GOOGLEVR;UNITY_HAS_TANGO;ENABLE_SPATIALTRACKING;ENABLE_ETC_COMPRESSION;PLATFORM_EXTENDS_VULKAN_DEVICE;PLATFORM_HAS_MULTIPLE_SWAPCHAINS;UNITY_ANDROID_SUPPORTS_SHADOWFILES;PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;NET_4_6;NET_UNITY_4_8;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_LEGACY_INPUT_MANAGER;TEXTCORE_FONT_ENGINE_1_5_OR_NEWER;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER;UNITY_EDITOR_ONLY_COMPILATION</DefineConstants>
+    <DefineConstants>UNITY_2022_3_9;UNITY_2022_3;UNITY_2022;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_2021_1_OR_NEWER;UNITY_2021_2_OR_NEWER;UNITY_2021_3_OR_NEWER;UNITY_2022_1_OR_NEWER;UNITY_2022_2_OR_NEWER;UNITY_2022_3_OR_NEWER;UNITY_INCLUDE_TESTS;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_NATIVE_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_EDITOR_GAME_SERVICES;ENABLE_UNITY_GAME_SERVICES_ANALYTICS_SUPPORT;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_GENERATE_NATIVE_PLUGINS_FOR_ASSEMBLIES_API;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_RUNTIME_PERMISSIONS;ENABLE_ENGINE_CODE_STRIPPING;ENABLE_ONSCREEN_KEYBOARD;ENABLE_MANAGED_UNITYTLS;INCLUDE_DYNAMIC_GI;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;ENABLE_VIDEO;ENABLE_ACCELERATOR_CLIENT_DEBUGGING;ENABLE_NAVIGATION_PACKAGE_DEBUG_VISUALIZATION;ENABLE_NAVIGATION_HEIGHTMESH_RUNTIME_SUPPORT;ENABLE_NAVIGATION_UI_REQUIRES_PACKAGE;PLATFORM_ANDROID;TEXTCORE_1_0_OR_NEWER;UNITY_ANDROID;UNITY_ANDROID_API;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;UNITY_CAN_SHOW_SPLASH_SCREEN;UNITY_HAS_GOOGLEVR;UNITY_HAS_TANGO;ENABLE_SPATIALTRACKING;ENABLE_ETC_COMPRESSION;PLATFORM_EXTENDS_VULKAN_DEVICE;PLATFORM_HAS_MULTIPLE_SWAPCHAINS;UNITY_ANDROID_SUPPORTS_SHADOWFILES;PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;NET_4_6;NET_UNITY_4_8;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_INPUT_SYSTEM;ENABLE_LEGACY_INPUT_MANAGER;TEXTCORE_FONT_ENGINE_1_5_OR_NEWER;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER;UNITY_EDITOR_ONLY_COMPILATION</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
@@ -59,41 +59,53 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\States\StateDescriptor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\Plugin\BoltStateResources.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\States\FlowStateEditor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\Flow\UnitBaseStateExtensions.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\Plugin\Changelogs\Changelog_1_0_2.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\Plugin\BoltStateConfiguration.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\Transitions\FlowStateTransitionWidget.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\Plugin\Changelogs\Changelog_1_2_4.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\States\FlowStateWidget.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\Description\StateMacroDescriptor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\Plugin\Changelogs\Changelog_1_1_1.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\Flow\FlowGraphContextStateExtension.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\Plugin\Migrations\Migration_Asset_to_Package.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\States\SuperStateEditor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\Transitions\StateTransitionDescriptor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\Description\StateGraphDescriptor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\Properties\AssemblyInfo.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\States\NesterStateEditor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\Plugin\Changelogs\Changelog_1_1_3.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\Plugin\Changelogs\Changelog_1_0_0.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\States\FlowStateDescriptor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\Plugin\Changelogs\Changelog_1_4_0.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\States\SuperStateDescriptor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\States\StateAnalysis.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\Transitions\StateTransitionDescription.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\StateGraphEditor.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\States\IStateWidget.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\States\StateTransitionAnalysis.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\Transitions\FlowStateTransitionAnalyser.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\States\FlowStateEditor.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\Plugin\BoltStateResources.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\Flow\UnitBaseStateExtensions.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\Flow\StateUnitEditor.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\Transitions\NesterStateTransitionAnalyser.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\Transitions\StateTransitionEditor.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\Flow\StateUnitWidget.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\States\StateEditor.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\Plugin\Changelogs\Changelog_1_0_2.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\Plugin\BoltStateConfiguration.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\Transitions\FlowStateTransitionWidget.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\Plugin\Changelogs\Changelog_1_1_2.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\Plugin\Changelogs\Changelog_1_2_4.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\States\StateAnalyser.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\States\NesterStateWidget.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\States\StateWidget.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\States\StateDescription.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\States\FlowStateWidget.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\Plugin\BoltStateManifest.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\Description\StateMacroDescriptor.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\StateRevealCondition.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\Description\StateMachineDescriptor.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\Plugin\Changelogs\Changelog_1_1_1.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\Plugin\Changelogs\Changelog_1_2_2.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\Plugin\Migrations\Migration_1_6_to_1_7.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\Flow\StateUnitDescriptor.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\Transitions\IStateTransitionWidget.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\Flow\FlowGraphContextStateExtension.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\Graph\StateGraphContext.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\Plugin\Changelogs\Changelog_1_4_1.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\Plugin\Migrations\Migration_Asset_to_Package.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\States\SuperStateEditor.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\Transitions\NesterStateTransitionDescriptor.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\Plugin\Changelogs\Changelog_1_3_0.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\Graph\StateCanvas.cs" />
@@ -101,29 +113,17 @@
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\States\AnyStateDescriptor.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\Transitions\NesterStateTransitionEditor.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\Transitions\FlowStateTransitionEditor.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\Transitions\StateTransitionDescriptor.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\Description\StateGraphDescriptor.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\Transitions\StateTransitionWidget.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\Transitions\TriggerStateTransitionWidget.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\Transitions\StateTransitionAnalyser.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\Plugin\Migrations\Migration_1_5_1_to_1_5_2.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\Plugin\BoltState.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\States\AnyStateWidget.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\Properties\AssemblyInfo.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\States\NesterStateEditor.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\Plugin\Changelogs\Changelog_1_1_3.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\Analytics\StateMacroSavedEvent.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\Transitions\NesterStateTransitionWidget.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\Plugin\Changelogs\Changelog_1_0_0.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\States\SuperStateWidget.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\Transitions\FlowStateTransitionDescriptor.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\States\FlowStateDescriptor.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\Plugin\Changelogs\Changelog_1_4_0.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\States\SuperStateDescriptor.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\States\StateAnalysis.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\Transitions\StateTransitionDescription.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\States\NesterStateDescriptor.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\StateGraphEditor.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\Plugin\Changelogs\Changelog_1_0_1.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.State\Plugin\Changelogs\Changelog_1_2_3.cs" />
   </ItemGroup>

@@ -22,7 +22,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>Temp\Bin\Debug\</OutputPath>
-    <DefineConstants>UNITY_2022_3_9;UNITY_2022_3;UNITY_2022;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_2021_1_OR_NEWER;UNITY_2021_2_OR_NEWER;UNITY_2021_3_OR_NEWER;UNITY_2022_1_OR_NEWER;UNITY_2022_2_OR_NEWER;UNITY_2022_3_OR_NEWER;UNITY_INCLUDE_TESTS;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_NATIVE_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_EDITOR_GAME_SERVICES;ENABLE_UNITY_GAME_SERVICES_ANALYTICS_SUPPORT;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_GENERATE_NATIVE_PLUGINS_FOR_ASSEMBLIES_API;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_RUNTIME_PERMISSIONS;ENABLE_ENGINE_CODE_STRIPPING;ENABLE_ONSCREEN_KEYBOARD;ENABLE_MANAGED_UNITYTLS;INCLUDE_DYNAMIC_GI;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;ENABLE_VIDEO;ENABLE_ACCELERATOR_CLIENT_DEBUGGING;ENABLE_NAVIGATION_PACKAGE_DEBUG_VISUALIZATION;ENABLE_NAVIGATION_HEIGHTMESH_RUNTIME_SUPPORT;ENABLE_NAVIGATION_UI_REQUIRES_PACKAGE;PLATFORM_ANDROID;TEXTCORE_1_0_OR_NEWER;UNITY_ANDROID;UNITY_ANDROID_API;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;UNITY_CAN_SHOW_SPLASH_SCREEN;UNITY_HAS_GOOGLEVR;UNITY_HAS_TANGO;ENABLE_SPATIALTRACKING;ENABLE_ETC_COMPRESSION;PLATFORM_EXTENDS_VULKAN_DEVICE;PLATFORM_HAS_MULTIPLE_SWAPCHAINS;UNITY_ANDROID_SUPPORTS_SHADOWFILES;PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;NET_4_6;NET_UNITY_4_8;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_LEGACY_INPUT_MANAGER;TEXTCORE_FONT_ENGINE_1_5_OR_NEWER;USING_XR_MANAGEMENT;USING_XR_SDK_OCULUS;USING_COMPATIBLE_OCULUS_XR_PLUGIN_VERSION;__OVERRIDED__PRIORITIZE_OCULUS_XR_SETTINGS;USING_QUEST_PRO_COMPATIBLE_OCULUS_XR_PLUGIN_VERSION;OVR_UNITY_ASSET_STORE;OCULUS_XR_SYMMETRIC;OCULUS_XR_EYE_TRACKED_FOVEATED_RENDERING;OCULUS_XR_PLUGIN_QUEST_ONE_REMOVED;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER;UNITY_EDITOR_ONLY_COMPILATION</DefineConstants>
+    <DefineConstants>UNITY_2022_3_9;UNITY_2022_3;UNITY_2022;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_2021_1_OR_NEWER;UNITY_2021_2_OR_NEWER;UNITY_2021_3_OR_NEWER;UNITY_2022_1_OR_NEWER;UNITY_2022_2_OR_NEWER;UNITY_2022_3_OR_NEWER;UNITY_INCLUDE_TESTS;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_NATIVE_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_EDITOR_GAME_SERVICES;ENABLE_UNITY_GAME_SERVICES_ANALYTICS_SUPPORT;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_GENERATE_NATIVE_PLUGINS_FOR_ASSEMBLIES_API;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_RUNTIME_PERMISSIONS;ENABLE_ENGINE_CODE_STRIPPING;ENABLE_ONSCREEN_KEYBOARD;ENABLE_MANAGED_UNITYTLS;INCLUDE_DYNAMIC_GI;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;ENABLE_VIDEO;ENABLE_ACCELERATOR_CLIENT_DEBUGGING;ENABLE_NAVIGATION_PACKAGE_DEBUG_VISUALIZATION;ENABLE_NAVIGATION_HEIGHTMESH_RUNTIME_SUPPORT;ENABLE_NAVIGATION_UI_REQUIRES_PACKAGE;PLATFORM_ANDROID;TEXTCORE_1_0_OR_NEWER;UNITY_ANDROID;UNITY_ANDROID_API;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;UNITY_CAN_SHOW_SPLASH_SCREEN;UNITY_HAS_GOOGLEVR;UNITY_HAS_TANGO;ENABLE_SPATIALTRACKING;ENABLE_ETC_COMPRESSION;PLATFORM_EXTENDS_VULKAN_DEVICE;PLATFORM_HAS_MULTIPLE_SWAPCHAINS;UNITY_ANDROID_SUPPORTS_SHADOWFILES;PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;NET_4_6;NET_UNITY_4_8;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_INPUT_SYSTEM;ENABLE_LEGACY_INPUT_MANAGER;TEXTCORE_FONT_ENGINE_1_5_OR_NEWER;USING_XR_MANAGEMENT;USING_XR_SDK_OCULUS;USING_COMPATIBLE_OCULUS_XR_PLUGIN_VERSION;__OVERRIDED__PRIORITIZE_OCULUS_XR_SETTINGS;USING_QUEST_PRO_COMPATIBLE_OCULUS_XR_PLUGIN_VERSION;OVR_UNITY_ASSET_STORE;OCULUS_XR_SYMMETRIC;OCULUS_XR_EYE_TRACKED_FOVEATED_RENDERING;OCULUS_XR_PLUGIN_QUEST_ONE_REMOVED;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER;UNITY_EDITOR_ONLY_COMPILATION</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
@@ -58,75 +58,75 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.9f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Oculus\VR\Editor\OVRBundleManager.cs" />
-    <Compile Include="Assets\Oculus\VR\Editor\OVRProjectSetup\OVRProjectSetupUtils.cs" />
     <Compile Include="Assets\Oculus\VR\Editor\OVRProjectSetup\Utils\OptionalLambdaType.cs" />
     <Compile Include="Assets\Oculus\VR\Editor\OVRProjectSetup\Telemetry\OVRProjectSetupTelemetryEvent.cs" />
-    <Compile Include="Assets\Oculus\VR\Editor\OVRProjectSetup\OVRProjectSetupStatusIcon.cs" />
     <Compile Include="Assets\Oculus\VR\Editor\OVRBuild.cs" />
     <Compile Include="Assets\Oculus\VR\Editor\Utils\OVRPassthroughHelper.cs" />
+    <Compile Include="Assets\Oculus\VR\Editor\OVRProjectSetup\OVRProjectSetupDrawer.cs" />
+    <Compile Include="Assets\Oculus\VR\Editor\OVRProjectSetup\OVRProjectSetupCli.cs" />
+    <Compile Include="Assets\Oculus\VR\Editor\OVRProjectSetup\Tasks\Implementations\OVRProjectSetupSceneTasks.cs" />
+    <Compile Include="Assets\Oculus\VR\Editor\OVRExperimentalCheck.cs" />
+    <Compile Include="Assets\Oculus\VR\Editor\OVRLint.cs" />
+    <Compile Include="Assets\Oculus\VR\Editor\OVRBundleTool.cs" />
+    <Compile Include="Assets\Oculus\VR\Editor\Utils\OVRReadOnlyDrawer.cs" />
+    <Compile Include="Assets\Oculus\VR\Editor\OVREditorUtils.cs" />
+    <Compile Include="Assets\Oculus\VR\Editor\OVRProjectSetup\Tasks\Processors\OVRConfigurationTaskProcessor.cs" />
+    <Compile Include="Assets\Oculus\VR\Editor\OVRGradleGeneration.cs" />
+    <Compile Include="Assets\Oculus\VR\Editor\OVRProjectConfig.cs" />
+    <Compile Include="Assets\Oculus\VR\Editor\OVRProjectSetup\Tasks\OVRConfigurationTaskException.cs" />
+    <Compile Include="Assets\Oculus\VR\Editor\OVRShaderBuildProcessor.cs" />
+    <Compile Include="Assets\Oculus\VR\Editor\OVRProjectSetup\Tasks\Processors\OVRConfigurationTaskFixer.cs" />
+    <Compile Include="Assets\Oculus\VR\Editor\OVRProjectSetup\Tasks\Implementations\OVRProjectSetupMovementSDKTasks2.cs" />
+    <Compile Include="Assets\Oculus\VR\Editor\Settings\OVRProjectSettingsProvider.cs" />
+    <Compile Include="Assets\Oculus\VR\Editor\OVRProjectSetup\Tasks\Processors\OVRConfigurationTaskUpdater.cs" />
+    <Compile Include="Assets\Oculus\VR\Editor\OVRSceneAnchorEditor.cs" />
+    <Compile Include="Assets\Oculus\VR\Editor\OVRTelemetry\OVREditorShutdown.cs" />
+    <Compile Include="Assets\Oculus\VR\Editor\OVRBundleManager.cs" />
+    <Compile Include="Assets\Oculus\VR\Editor\OVRProjectSetup\OVRProjectSetupUtils.cs" />
+    <Compile Include="Assets\Oculus\VR\Editor\OVRProjectSetup\OVRProjectSetupStatusIcon.cs" />
     <Compile Include="Assets\Oculus\VR\Editor\OVRProjectSetup\Utils\ConsoleLinkEventHandler.cs" />
     <Compile Include="Assets\Oculus\VR\Editor\OVRProjectSetup\OVRProjectSetupSettings.cs" />
     <Compile Include="Assets\Oculus\VR\Editor\Settings\OVRRuntimeSettingsBuildProcessor.cs" />
     <Compile Include="Assets\Oculus\VR\Editor\OVRADBTool.cs" />
-    <Compile Include="Assets\Oculus\VR\Editor\OVRProjectSetup\OVRProjectSetupDrawer.cs" />
     <Compile Include="Assets\Oculus\VR\Editor\Utils\OVRGuiContent.cs" />
     <Compile Include="Assets\Oculus\VR\Editor\OVRProjectSetup\OVRProjectSetupSettingItem.cs" />
-    <Compile Include="Assets\Oculus\VR\Editor\OVRProjectSetup\OVRProjectSetupCli.cs" />
     <Compile Include="Assets\Oculus\VR\Editor\OVRProjectSetup\OVRProjectSetupSettingsProvider.cs" />
     <Compile Include="Assets\Oculus\VR\Editor\OVRSystemProfilerPanel.cs" />
-    <Compile Include="Assets\Oculus\VR\Editor\OVRProjectSetup\Tasks\Implementations\OVRProjectSetupSceneTasks.cs" />
     <Compile Include="Assets\Oculus\VR\Editor\OVRTelemetry\OVREditorStart.cs" />
     <Compile Include="Assets\Oculus\VR\Editor\OVRExpansionFileGenerator.cs" />
     <Compile Include="Assets\Oculus\VR\Editor\OVRProjectSetup\Tasks\Processors\OVRConfigurationTaskUpdaterSummary.cs" />
-    <Compile Include="Assets\Oculus\VR\Editor\OVRExperimentalCheck.cs" />
     <Compile Include="Assets\Oculus\VR\Editor\OVRProjectSetup\Tasks\Implementations\OVRProjectSetupPassthrough.cs" />
     <Compile Include="Assets\Oculus\VR\Editor\OVRManifestPreprocessor.cs" />
-    <Compile Include="Assets\Oculus\VR\Editor\OVRLint.cs" />
     <Compile Include="Assets\Oculus\VR\Editor\OVRDeviceSelector.cs" />
     <Compile Include="Assets\Oculus\VR\Editor\OVRProjectSetup\Tasks\OVRConfigurationTask.cs" />
-    <Compile Include="Assets\Oculus\VR\Editor\OVRBundleTool.cs" />
-    <Compile Include="Assets\Oculus\VR\Editor\Utils\OVRReadOnlyDrawer.cs" />
     <Compile Include="Assets\Oculus\VR\Editor\AssemblyInfo.cs" />
     <Compile Include="Assets\Oculus\VR\Editor\OVRLayerAttributeEditor.cs" />
     <Compile Include="Assets\Oculus\VR\Editor\OVRProjectSetup\Tasks\Implementations\OVRProjectSetupQualityTasks.cs" />
-    <Compile Include="Assets\Oculus\VR\Editor\OVREditorUtils.cs" />
     <Compile Include="Assets\Oculus\VR\Editor\OVRPlatformTool.cs" />
-    <Compile Include="Assets\Oculus\VR\Editor\OVRProjectSetup\Tasks\Processors\OVRConfigurationTaskProcessor.cs" />
     <Compile Include="Assets\Oculus\VR\Editor\OVRProjectSetup\OVRProjectSetupBuildValidator.cs" />
     <Compile Include="Assets\Oculus\VR\Editor\OVRProjectSetup\OVRProjectSetupUpdater.cs" />
-    <Compile Include="Assets\Oculus\VR\Editor\OVRGradleGeneration.cs" />
-    <Compile Include="Assets\Oculus\VR\Editor\OVRProjectConfig.cs" />
     <Compile Include="Assets\Oculus\VR\Editor\OVRConfig.cs" />
     <Compile Include="Assets\Oculus\VR\Editor\OVRProjectSetup\Tasks\OVRConfigurationTaskSourceCode.cs" />
     <Compile Include="Assets\Oculus\VR\Editor\OVRProjectSetup\Tasks\Implementations\OVRProjectSetupXRTasks.cs" />
     <Compile Include="Assets\Oculus\VR\Editor\OVRScenePlaneEditor.cs" />
     <Compile Include="Assets\Oculus\VR\Editor\OVRProjectSetup\Tasks\Implementations\OVRProjectSetupMovementTasks.cs" />
     <Compile Include="Assets\Oculus\VR\Editor\OVRSemanticClassificationEditor.cs" />
-    <Compile Include="Assets\Oculus\VR\Editor\OVRProjectSetup\Tasks\OVRConfigurationTaskException.cs" />
-    <Compile Include="Assets\Oculus\VR\Editor\OVRShaderBuildProcessor.cs" />
     <Compile Include="Assets\Oculus\VR\Editor\OVRPluginInfo.cs" />
-    <Compile Include="Assets\Oculus\VR\Editor\OVRProjectSetup\Tasks\Processors\OVRConfigurationTaskFixer.cs" />
     <Compile Include="Assets\Oculus\VR\Editor\OVRProjectSetup\Tasks\Implementations\OVRProjectSetupRenderingTasks.cs" />
+    <Compile Include="Assets\Oculus\VR\Editor\OVRProjectSetup\Tasks\OVRConfigurationTaskRegistry.cs" />
     <Compile Include="Assets\Oculus\VR\Editor\OVRPlatformToolSettings.cs" />
     <Compile Include="Assets\Oculus\VR\Editor\OVRProjectSetup\OVRProjectSetup.cs" />
-    <Compile Include="Assets\Oculus\VR\Editor\OVRProjectSetup\Tasks\OVRConfigurationTaskRegistry.cs" />
-    <Compile Include="Assets\Oculus\VR\Editor\OVRProjectSetup\Tasks\Implementations\OVRProjectSetupMovementSDKTasks2.cs" />
     <Compile Include="Assets\Oculus\VR\Editor\OVRSceneVolumeEditor.cs" />
     <Compile Include="Assets\Oculus\VR\Editor\OVRPluginUpdater.cs" />
-    <Compile Include="Assets\Oculus\VR\Editor\Settings\OVRProjectSettingsProvider.cs" />
     <Compile Include="Assets\Oculus\VR\Editor\OVREngineConfigurationUpdater.cs" />
     <Compile Include="Assets\Oculus\VR\Editor\OVRTelemetry\OVRTelemetryPopup.cs" />
-    <Compile Include="Assets\Oculus\VR\Editor\OVRProjectSetup\Tasks\Processors\OVRConfigurationTaskUpdater.cs" />
     <Compile Include="Assets\Oculus\VR\Editor\OVRScreenshotWizard.cs" />
     <Compile Include="Assets\Oculus\VR\Editor\OVRDirectorySyncer.cs" />
-    <Compile Include="Assets\Oculus\VR\Editor\OVRSceneAnchorEditor.cs" />
     <Compile Include="Assets\Oculus\VR\Editor\OVRProjectSetup\Tasks\Implementations\OVRProjectSetupMovementSDK.cs" />
     <Compile Include="Assets\Oculus\VR\Editor\OVRProjectSetup\Tasks\Implementations\OVRProjectSetupCompatibilityTasks.cs" />
     <Compile Include="Assets\Oculus\VR\Editor\OVRProjectSetup\Tasks\Implementations\OVRProjectSetupPhysicsTasks.cs" />
     <Compile Include="Assets\Oculus\VR\Editor\OVRProjectSetup\Utils\SerializableDictionary.cs" />
     <Compile Include="Assets\Oculus\VR\Editor\OVRProjectSetup\OVRProjectSetupReport.cs" />
-    <Compile Include="Assets\Oculus\VR\Editor\OVRTelemetry\OVREditorShutdown.cs" />
     <Compile Include="Assets\Oculus\VR\Editor\OVRSystemSplashScreenEditor.cs" />
     <Compile Include="Assets\Oculus\VR\Editor\PathHelper.cs" />
     <Compile Include="Assets\Oculus\VR\Editor\OVRProjectSetup\Tasks\Processors\OVRConfigurationTaskProcessorQueue.cs" />

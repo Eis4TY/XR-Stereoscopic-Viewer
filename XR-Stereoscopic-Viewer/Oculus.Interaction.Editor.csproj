@@ -22,7 +22,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>Temp\Bin\Debug\</OutputPath>
-    <DefineConstants>UNITY_2022_3_9;UNITY_2022_3;UNITY_2022;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_2021_1_OR_NEWER;UNITY_2021_2_OR_NEWER;UNITY_2021_3_OR_NEWER;UNITY_2022_1_OR_NEWER;UNITY_2022_2_OR_NEWER;UNITY_2022_3_OR_NEWER;UNITY_INCLUDE_TESTS;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_NATIVE_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_EDITOR_GAME_SERVICES;ENABLE_UNITY_GAME_SERVICES_ANALYTICS_SUPPORT;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_GENERATE_NATIVE_PLUGINS_FOR_ASSEMBLIES_API;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_RUNTIME_PERMISSIONS;ENABLE_ENGINE_CODE_STRIPPING;ENABLE_ONSCREEN_KEYBOARD;ENABLE_MANAGED_UNITYTLS;INCLUDE_DYNAMIC_GI;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;ENABLE_VIDEO;ENABLE_ACCELERATOR_CLIENT_DEBUGGING;ENABLE_NAVIGATION_PACKAGE_DEBUG_VISUALIZATION;ENABLE_NAVIGATION_HEIGHTMESH_RUNTIME_SUPPORT;ENABLE_NAVIGATION_UI_REQUIRES_PACKAGE;PLATFORM_ANDROID;TEXTCORE_1_0_OR_NEWER;UNITY_ANDROID;UNITY_ANDROID_API;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;UNITY_CAN_SHOW_SPLASH_SCREEN;UNITY_HAS_GOOGLEVR;UNITY_HAS_TANGO;ENABLE_SPATIALTRACKING;ENABLE_ETC_COMPRESSION;PLATFORM_EXTENDS_VULKAN_DEVICE;PLATFORM_HAS_MULTIPLE_SWAPCHAINS;UNITY_ANDROID_SUPPORTS_SHADOWFILES;PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;NET_4_6;NET_UNITY_4_8;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_LEGACY_INPUT_MANAGER;TEXTCORE_FONT_ENGINE_1_5_OR_NEWER;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER;UNITY_EDITOR_ONLY_COMPILATION</DefineConstants>
+    <DefineConstants>UNITY_2022_3_9;UNITY_2022_3;UNITY_2022;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_2021_1_OR_NEWER;UNITY_2021_2_OR_NEWER;UNITY_2021_3_OR_NEWER;UNITY_2022_1_OR_NEWER;UNITY_2022_2_OR_NEWER;UNITY_2022_3_OR_NEWER;UNITY_INCLUDE_TESTS;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_NATIVE_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_EDITOR_GAME_SERVICES;ENABLE_UNITY_GAME_SERVICES_ANALYTICS_SUPPORT;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_GENERATE_NATIVE_PLUGINS_FOR_ASSEMBLIES_API;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_RUNTIME_PERMISSIONS;ENABLE_ENGINE_CODE_STRIPPING;ENABLE_ONSCREEN_KEYBOARD;ENABLE_MANAGED_UNITYTLS;INCLUDE_DYNAMIC_GI;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;ENABLE_VIDEO;ENABLE_ACCELERATOR_CLIENT_DEBUGGING;ENABLE_NAVIGATION_PACKAGE_DEBUG_VISUALIZATION;ENABLE_NAVIGATION_HEIGHTMESH_RUNTIME_SUPPORT;ENABLE_NAVIGATION_UI_REQUIRES_PACKAGE;PLATFORM_ANDROID;TEXTCORE_1_0_OR_NEWER;UNITY_ANDROID;UNITY_ANDROID_API;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;UNITY_CAN_SHOW_SPLASH_SCREEN;UNITY_HAS_GOOGLEVR;UNITY_HAS_TANGO;ENABLE_SPATIALTRACKING;ENABLE_ETC_COMPRESSION;PLATFORM_EXTENDS_VULKAN_DEVICE;PLATFORM_HAS_MULTIPLE_SWAPCHAINS;UNITY_ANDROID_SUPPORTS_SHADOWFILES;PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;NET_4_6;NET_UNITY_4_8;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_INPUT_SYSTEM;ENABLE_LEGACY_INPUT_MANAGER;TEXTCORE_FONT_ENGINE_1_5_OR_NEWER;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER;UNITY_EDITOR_ONLY_COMPILATION</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
@@ -58,64 +58,64 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.9f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Oculus\Interaction\Editor\Utils\HandGrabPoseWizard.cs" />
     <Compile Include="Assets\Oculus\Interaction\Editor\PackageUtils\AssetListWindow.cs" />
     <Compile Include="Assets\Oculus\Interaction\Editor\Utils\EditorConstants.cs" />
     <Compile Include="Assets\Oculus\Interaction\Editor\Surfaces\CylinderSurfaceEditor.cs" />
-    <Compile Include="Assets\Oculus\Interaction\Editor\Grab\SnapSurfaces\SphereGrabSurfaceEditor.cs" />
     <Compile Include="Assets\Oculus\Interaction\Editor\Utils\OptionalDrawer.cs" />
     <Compile Include="Assets\Oculus\Interaction\Editor\AutoWiring\FieldWiringStrategies.cs" />
-    <Compile Include="Assets\Oculus\Interaction\Editor\Hands\HandVisualEditor.cs" />
     <Compile Include="Assets\Oculus\Interaction\Editor\EditorBase.cs" />
     <Compile Include="Assets\Oculus\Interaction\Editor\PoseDetection\TransformConfigEditor.cs" />
+    <Compile Include="Assets\Oculus\Interaction\Editor\SimplifiedEditor.cs" />
+    <Compile Include="Assets\Oculus\Interaction\Editor\Body\BodyPoseComparerConfigPropertyDrawer.cs" />
+    <Compile Include="Assets\Oculus\Interaction\Editor\Grab\Visuals\HandPuppetEditor.cs" />
+    <Compile Include="Assets\Oculus\Interaction\Editor\Utils\HandAnimatorWizard.cs" />
+    <Compile Include="Assets\Oculus\Interaction\Editor\Surfaces\ClippedPlaneSurfaceEditor.cs" />
+    <Compile Include="Assets\Oculus\Interaction\Editor\Utils\PluginUpdater.cs" />
+    <Compile Include="Assets\Oculus\Interaction\Editor\Body\BodyPoseRecorder.cs" />
+    <Compile Include="Assets\Oculus\Interaction\Editor\PoseDetection\JointVelocityFeatureConfigEditor.cs" />
+    <Compile Include="Assets\Oculus\Interaction\Editor\AutoWiring\AutoWiring.cs" />
+    <Compile Include="Assets\Oculus\Interaction\Editor\Selection\Controllers\ControllerOffsetEditor.cs" />
+    <Compile Include="Assets\Oculus\Interaction\Editor\Grab\SnapSurfaces\BoxGrabSurfaceEditor.cs" />
+    <Compile Include="Assets\Oculus\Interaction\Editor\Surfaces\CircleSurfaceEditor.cs" />
+    <Compile Include="Assets\Oculus\Interaction\Editor\Surfaces\ClippedCylinderSurfaceEditor.cs" />
+    <Compile Include="Assets\Oculus\Interaction\Editor\PackageUtils\PackageCleanup.cs" />
+    <Compile Include="Assets\Oculus\Interaction\Editor\Selection\Hands\HandWristOffsetEditor.cs" />
+    <Compile Include="Assets\Oculus\Interaction\Editor\Surfaces\BoundsClipperEditor.cs" />
+    <Compile Include="Assets\Oculus\Interaction\Editor\UnityCanvas\CanvasCylinderEditor.cs" />
+    <Compile Include="Assets\Oculus\Interaction\Editor\Grab\HandGrab\HandPoseEditor.cs" />
+    <Compile Include="Assets\Oculus\Interaction\Editor\UnityCanvas\CanvasRenderTextureEditor.cs" />
+    <Compile Include="Assets\Oculus\Interaction\Editor\Grab\HandGrab\HandGrabScaleKeysEditor.cs" />
+    <Compile Include="Assets\Oculus\Interaction\Editor\PoseDetection\FeatureStateThresholdsEditor.cs" />
+    <Compile Include="Assets\Oculus\Interaction\Editor\Grab\HandGrab\HandGhostProviderUtils.cs" />
+    <Compile Include="Assets\Oculus\Interaction\Editor\Surfaces\PlaneSurfaceEditor.cs" />
+    <Compile Include="Assets\Oculus\Interaction\Editor\Grab\HandGrab\HandGrabInteractableEditor.cs" />
+    <Compile Include="Assets\Oculus\Interaction\Editor\Utils\HandGrabPoseWizard.cs" />
+    <Compile Include="Assets\Oculus\Interaction\Editor\Grab\SnapSurfaces\SphereGrabSurfaceEditor.cs" />
+    <Compile Include="Assets\Oculus\Interaction\Editor\Hands\HandVisualEditor.cs" />
     <Compile Include="Assets\Oculus\Interaction\Editor\Poke\PokeInteractableEditor.cs" />
     <Compile Include="Assets\Oculus\Interaction\Editor\Poke\PokeInteractorEditor.cs" />
     <Compile Include="Assets\Oculus\Interaction\Editor\Scripts\PhongPbrMaterialDescriptionPostprocessor.cs" />
     <Compile Include="Assets\Oculus\Interaction\Editor\EditorFallbacks.cs" />
-    <Compile Include="Assets\Oculus\Interaction\Editor\SimplifiedEditor.cs" />
-    <Compile Include="Assets\Oculus\Interaction\Editor\Body\BodyPoseComparerConfigPropertyDrawer.cs" />
     <Compile Include="Assets\Oculus\Interaction\Editor\PoseDetection\JointRotationFeatureConfigEditor.cs" />
     <Compile Include="Assets\Oculus\Interaction\Editor\Utils\ConditionalHideDrawer.cs" />
     <Compile Include="Assets\Oculus\Interaction\Editor\PoseDetection\FeatureListPropertyDrawer.cs" />
-    <Compile Include="Assets\Oculus\Interaction\Editor\Grab\Visuals\HandPuppetEditor.cs" />
-    <Compile Include="Assets\Oculus\Interaction\Editor\Utils\HandAnimatorWizard.cs" />
-    <Compile Include="Assets\Oculus\Interaction\Editor\Surfaces\ClippedPlaneSurfaceEditor.cs" />
     <Compile Include="Assets\Oculus\Interaction\Editor\Utils\IRemoteDrawable.cs" />
     <Compile Include="Assets\Oculus\Interaction\Editor\Grab\GrabbingRuleEditor.cs" />
-    <Compile Include="Assets\Oculus\Interaction\Editor\Utils\PluginUpdater.cs" />
     <Compile Include="Assets\Oculus\Interaction\Editor\Surfaces\SurfaceDrawing.cs" />
-    <Compile Include="Assets\Oculus\Interaction\Editor\Body\BodyPoseRecorder.cs" />
     <Compile Include="Assets\Oculus\Interaction\Editor\Grab\HandGrab\HandWristOffsetUndoWizard.cs" />
     <Compile Include="Assets\Oculus\Interaction\Editor\UnityCanvas\CanvasMeshRendererEditor.cs" />
     <Compile Include="Assets\Oculus\Interaction\Editor\PoseDetection\TransformFeatureStateThresholdsEditor.cs" />
     <Compile Include="Assets\Oculus\Interaction\Editor\Grab\HandGrab\HandGrabPoseEditor.cs" />
-    <Compile Include="Assets\Oculus\Interaction\Editor\PoseDetection\JointVelocityFeatureConfigEditor.cs" />
-    <Compile Include="Assets\Oculus\Interaction\Editor\AutoWiring\AutoWiring.cs" />
     <Compile Include="Assets\Oculus\Interaction\Editor\AutoWiring\InteractionAutoWiring.cs" />
-    <Compile Include="Assets\Oculus\Interaction\Editor\Selection\Controllers\ControllerOffsetEditor.cs" />
-    <Compile Include="Assets\Oculus\Interaction\Editor\Grab\SnapSurfaces\BoxGrabSurfaceEditor.cs" />
     <Compile Include="Assets\Oculus\Interaction\Editor\Grab\SnapSurfaces\CylinderGrabSurfaceEditor.cs" />
-    <Compile Include="Assets\Oculus\Interaction\Editor\Surfaces\CircleSurfaceEditor.cs" />
-    <Compile Include="Assets\Oculus\Interaction\Editor\Surfaces\ClippedCylinderSurfaceEditor.cs" />
     <Compile Include="Assets\Oculus\Interaction\Editor\Grab\HandGrab\DistanceHandGrabInteractableEditor.cs" />
     <Compile Include="Assets\Oculus\Interaction\Editor\AutoWiring\UnityObjectAddedBroadcaster.cs" />
     <Compile Include="Assets\Oculus\Interaction\Editor\PoseDetection\FingerFeatureStateThresholdsEditor.cs" />
-    <Compile Include="Assets\Oculus\Interaction\Editor\PackageUtils\PackageCleanup.cs" />
-    <Compile Include="Assets\Oculus\Interaction\Editor\Selection\Hands\HandWristOffsetEditor.cs" />
     <Compile Include="Assets\Oculus\Interaction\Editor\Hands\FromHandPrefabDataSourceEditor.cs" />
-    <Compile Include="Assets\Oculus\Interaction\Editor\Surfaces\BoundsClipperEditor.cs" />
     <Compile Include="Assets\Oculus\Interaction\Editor\Grab\SnapSurfaces\BezierGrabSurfaceEditor.cs" />
     <Compile Include="Assets\Oculus\Interaction\Editor\PoseDetection\FingerFeatureListPropertyDrawer.cs" />
-    <Compile Include="Assets\Oculus\Interaction\Editor\UnityCanvas\CanvasCylinderEditor.cs" />
-    <Compile Include="Assets\Oculus\Interaction\Editor\Grab\HandGrab\HandPoseEditor.cs" />
-    <Compile Include="Assets\Oculus\Interaction\Editor\UnityCanvas\CanvasRenderTextureEditor.cs" />
     <Compile Include="Assets\Oculus\Interaction\Editor\Selection\Hands\ConicalFrustumEditor.cs" />
-    <Compile Include="Assets\Oculus\Interaction\Editor\Grab\HandGrab\HandGrabScaleKeysEditor.cs" />
-    <Compile Include="Assets\Oculus\Interaction\Editor\PoseDetection\FeatureStateThresholdsEditor.cs" />
     <Compile Include="Assets\Oculus\Interaction\Editor\Surfaces\CylinderClipperEditor.cs" />
-    <Compile Include="Assets\Oculus\Interaction\Editor\Grab\HandGrab\HandGhostProviderUtils.cs" />
-    <Compile Include="Assets\Oculus\Interaction\Editor\Surfaces\PlaneSurfaceEditor.cs" />
-    <Compile Include="Assets\Oculus\Interaction\Editor\Grab\HandGrab\HandGrabInteractableEditor.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Oculus\Interaction\Editor\Oculus.Interaction.Editor.asmdef" />

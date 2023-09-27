@@ -1,7 +1,9 @@
 {
   "dependencies": {
+    "com.jetxr.visionui": "https://github.com/jetstyle/Apple-Vision-Pro-UI-Kit.git",
     "com.unity.collab-proxy": "2.0.7",
     "com.unity.feature.development": "1.0.1",
+    "com.unity.shadergraph": "14.0.8",
     "com.unity.textmeshpro": "3.0.6",
     "com.unity.timeline": "1.7.5",
     "com.unity.ugui": "1.0.0",

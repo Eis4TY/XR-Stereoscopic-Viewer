@@ -11,24 +11,26 @@ using System.Drawing;
 public class ContentControl : MonoBehaviour
 {
     [Header("Photo")]
-    public Texture img_L;
-    public Texture img_R;
+    public Texture2D img;
     [Space]
     [Header("Photo DeepMap")]
-    public Texture2D imgDeep_L;
-    public Texture2D imgDeep_R;
+    public Texture2D imgDeep;
     [Space]
     [Header("Video")]
-    public VideoClip clip_L;
-    public VideoClip clip_R;
+    public string videoURL;
+    //private float videosize_W, videosize_H;
     [Space]
     [Space]
     [Space]
-    public GameObject plane_L;
-    public GameObject plane_R;
-    private Material Plane_L;
-    private Material Plane_R;
+    public GameObject planeObj_L;
+    public GameObject planeObj_R;
+
+    public Material Plane_L;
+    public Material Plane_R;
     [Space]
+    public GameObject InnerWallObj_L;
+    public GameObject InnerWallObj_R;
+
     public Material InnerWall_L;
     public Material InnerWall_R;
     [Space]
@@ -37,10 +39,13 @@ public class ContentControl : MonoBehaviour
     [Space]
     public bool isVideo = false;
     public bool isDepth = false;
-    [Range(0, 5)]
-    public float deepValue = 0;
 
-    
+    [Header("DeepControl")]
+    [Range(0, 10)]
+    public float deepValue = 0;
+    public Vector3 PointPos;
+
+
     void OnValidate()
     {
         ChangeContent();
@@ -48,99 +53,146 @@ public class ContentControl : MonoBehaviour
 
     private void ChangeContent()
     {
-        Resize();
-
-        //PHOTO
-        Plane_L = plane_L.GetComponent<MeshRenderer>().sharedMaterial;
-        Plane_R = plane_R.GetComponent<MeshRenderer>().sharedMaterial;
-
-        Plane_L.SetTexture("_MainTex", img_L);
-        Plane_R.SetTexture("_MainTex", img_R);
-        
-        if (isDepth & imgDeep_L != null)
+        if (isVideo)  //VIDEO
         {
-            Plane_L.SetTexture("_depth", imgDeep_L);
-            Plane_R.SetTexture("_depth", imgDeep_R);
+            PlayVideo(planeObj_L, videoURL);
+            PlayVideo(planeObj_R, videoURL);
+            PlayVideo(InnerWallObj_L, videoURL);
+            PlayVideo(InnerWallObj_R, videoURL);
 
-            Plane_L.SetFloat("_scale", deepValue);
-            Plane_R.SetFloat("_scale", deepValue);
         }
-        else
+        else  //PHOTO
         {
-            Plane_L.SetFloat("_scale", 0);
-            Plane_R.SetFloat("_scale", 0);
-        }
-        
-        InnerWall_L.mainTexture = img_L;
-        InnerWall_R.mainTexture = img_R;
+            StopVideo(planeObj_L);
+            StopVideo(planeObj_R);
+            StopVideo(InnerWallObj_L);
+            StopVideo(InnerWallObj_R);
 
-        //VIDEO
-        VideoPlayer video_L = plane_L.transform.GetComponent<VideoPlayer>();
-        VideoPlayer video_R = plane_R.transform.GetComponent<VideoPlayer>();
-        if (img_L is RenderTexture & img_R is RenderTexture)
-        {
-            Debug.Log("是rendertexture！！！！");
-            video_L.enabled = true;
-            video_L.clip = clip_L;
+            Plane_L.SetTextureScale("_Texture2D", new Vector2(0.5f, 1.0f));
+            Resize(img.width, img.height);
 
-            video_R.enabled = true;
-            video_R.clip = clip_R;
+            Plane_L.SetTexture("_Texture2D", img);
+            Plane_R.SetTexture("_Texture2D", img);
 
-            video_L.Play();
-            video_R.Play();
-        }
-        else
-        {
-            video_L.enabled = false; 
-            video_R.enabled = false;
+            if (isDepth & imgDeep != null)
+            {
+                Plane_L.SetTexture("_Depth", imgDeep);
+                Plane_R.SetTexture("_Depth", imgDeep);
+
+                Plane_L.SetFloat("_Bulge", deepValue);
+                Plane_R.SetFloat("_Bulge", deepValue);
+            }
+            else
+            {
+                Plane_L.SetFloat("_Bulge", 0);
+                Plane_R.SetFloat("_Bulge", 0);
+            }
+
+            InnerWall_L.SetTexture("_Texture2D", img);
+            InnerWall_R.SetTexture("_Texture2D", img);
         }
     }
 
 
+    private int preparedPlayersCount = 0; //同时播放视频
+    private List<VideoPlayer> playersToPlay = new List<VideoPlayer>();
+
+    private void PlayVideo(GameObject playObj, string url)
+    {
+        VideoPlayer player = playObj.GetComponent<VideoPlayer>();
+        player.enabled = true;
+        Renderer texRenderer = playObj.GetComponent<Renderer>();
+        player.source = VideoSource.Url;
+        player.url = url;
+        
+        player.prepareCompleted += PlayerPrepareCompleted; // 添加事件监听
+        player.Prepare(); // 开始准备视频
+
+        player.renderMode = VideoRenderMode.MaterialOverride;
+        player.targetMaterialRenderer = texRenderer;
+        player.targetMaterialProperty = "_Texture2D";
+    }
+    
+    private void PlayerPrepareCompleted(VideoPlayer player)
+    {
+        Resize(player.width, player.height);
+
+        preparedPlayersCount++;
+        playersToPlay.Add(player);
+
+        if (preparedPlayersCount == 4) // 当四个视频都已经准备好
+        {
+            foreach (var p in playersToPlay)
+            {
+                p.Play();
+            }
+
+            // 重置计数器和列表，以备后续的播放请求
+            preparedPlayersCount = 0;
+            playersToPlay.Clear();
+        }
+    }
+
+    private void StopVideo(GameObject playObj)
+    {
+        VideoPlayer player = playObj.GetComponent<VideoPlayer>();
+        player.Stop();
+        player.enabled = false;
+    }
+    
     void Update()
     {
         // 比较当前帧与上一帧的变化
-        if (img_L != lastImgL)
+        if (img != lastImg || deepValue != lastDeepValue || videoURL != lastVideoURL)
         {
             ChangeContent();
 
-            lastImgL = img_L;
+            lastImg = img;
+            lastDeepValue = deepValue;
+            lastVideoURL = videoURL;
         }
     }
-    private Texture lastImgL;
+    
+    private Texture lastImg;
+    private string lastVideoURL;
+    private float lastDeepValue;
 
-    private void Resize() //设置图像显示的宽高比
+    private void Resize(float img_width, float img_height) //设置图像显示的宽高比
     {
-        float img_width = img_L.width;
-        float img_height = img_L.height;
-
         Vector3 scaleValue;
 
-        if(img_width > img_height)
+        if (img_width / 2 > img_height)
         {
-            scaleValue = new Vector3(img_width / img_height, 1, 1);
-            plane_L.transform.localScale = scaleValue;
-            plane_R.transform.localScale = scaleValue;
+            scaleValue = new Vector3((img_width / 2) / img_height, 1, 1);
+            planeObj_L.transform.localScale = scaleValue;
+            planeObj_R.transform.localScale = scaleValue;
             blurMask.localScale = scaleValue;
-            ViewWindow.sizeDelta = new Vector2((img_width / img_height) * 0.7f, 0.7f);
+            ViewWindow.sizeDelta = new Vector2(((img_width / 2) / img_height) * 0.7f, 0.7f);
         }
         else
         {
-            scaleValue = new Vector3(1,img_height / img_width, 1);
-            plane_L.transform.localScale = scaleValue;
-            plane_R.transform.localScale = scaleValue;
+            scaleValue = new Vector3(1, img_height / (img_width / 2), 1);
+            planeObj_L.transform.localScale = scaleValue;
+            planeObj_R.transform.localScale = scaleValue;
             blurMask.localScale = scaleValue;
-            ViewWindow.sizeDelta = new Vector2(0.7f, (img_height / img_width) * 0.7f);
+            ViewWindow.sizeDelta = new Vector2(0.7f, (img_height / (img_width / 2)) * 0.7f);
         }
     }
 
-    public void Set_img_L(Texture image)
+    public void Set_img(Texture2D image)
     {
-        img_L = image;
+        img = image;
     }
-    public void Set_img_R(Texture image)
+    public void Set_imgDeep(Texture2D image)
     {
-        img_R = image;
+        imgDeep = image;
+    }
+    public void Set_isVideo(bool IsVideo)
+    {
+        isVideo = IsVideo;
+    }
+    public void Set_videoURL(string url)
+    {
+        videoURL = url;
     }
 }
-
