@@ -16,6 +16,7 @@ Bring the experience of the Photos App in Apple Vision Pro to the META Quest ser
 - [x]  Import local files
 - [x]  spatial UI
 - [ ]  Bump mapping
+- [ ]  MR mode
 - [ ]  Advanced blur effect
 - [ ]  Window size adjustment
 
