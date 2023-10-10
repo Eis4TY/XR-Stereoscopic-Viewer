@@ -906,6 +906,10 @@
       <Project>{EF5169CF-4618-1D96-5A3B-DC10F7C62B82}</Project>
       <Name>Meta.VoiceSDK.Mic.WebGL</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.XR.Hands.csproj">
+      <Project>{5138734C-0CBB-F621-7FB2-22E8F71B5352}</Project>
+      <Name>Unity.XR.Hands</Name>
+    </ProjectReference>
     <ProjectReference Include="Oculus.Platform.Editor.csproj">
       <Project>{FF5131A3-6F20-974E-2E87-9762D53FCDC5}</Project>
       <Name>Oculus.Platform.Editor</Name>
@@ -990,6 +994,10 @@
       <Project>{F1A77CCA-87FC-373C-4598-81E4B1F38246}</Project>
       <Name>Meta.WitAi</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.XR.Interaction.Toolkit.Samples.StarterAssets.Editor.csproj">
+      <Project>{053E43D8-0D56-849D-0D0D-0B63A29359A2}</Project>
+      <Name>Unity.XR.Interaction.Toolkit.Samples.StarterAssets.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="Oculus.Interaction.InterfaceSupport.csproj">
       <Project>{9597D020-99C1-B9A0-491F-2FCF1E3D6499}</Project>
       <Name>Oculus.Interaction.InterfaceSupport</Name>
@@ -1045,6 +1053,10 @@
     <ProjectReference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.csproj">
       <Project>{21692A85-7695-FD07-6578-96FB7FA29827}</Project>
       <Name>Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.XR.Interaction.Toolkit.Samples.StarterAssets.csproj">
+      <Project>{A8B00BB3-2044-14EB-CC94-8923B9EAF683}</Project>
+      <Name>Unity.XR.Interaction.Toolkit.Samples.StarterAssets</Name>
     </ProjectReference>
     <ProjectReference Include="Meta.WitAi.Conduit.csproj">
       <Project>{9C2084AA-693B-EEC5-819D-EDFAE5E6BBBF}</Project>
@@ -1146,6 +1158,10 @@
       <Project>{22EC32CD-7187-1C7D-800A-4221AA55EE12}</Project>
       <Name>Oculus.Interaction</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.XR.Hands.Editor.csproj">
+      <Project>{10320915-F377-9B56-3E40-3A319D9DA1CC}</Project>
+      <Name>Unity.XR.Hands.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.Flow.Editor.csproj">
       <Project>{1D6DADB0-CB9E-6891-196E-843A6B36B1A7}</Project>
       <Name>Unity.VisualScripting.Flow.Editor</Name>
@@ -1194,6 +1210,10 @@
       <Project>{8CBE54BC-CA13-8B3E-C072-EA0743AA5620}</Project>
       <Name>Meta.WitAi.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.XR.Hands.Samples.VisualizerSample.csproj">
+      <Project>{26822354-ED43-6672-A109-808E83681FB1}</Project>
+      <Name>Unity.XR.Hands.Samples.VisualizerSample</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.State.Editor.csproj">
       <Project>{43751B06-B17B-E398-A00F-064588756396}</Project>
       <Name>Unity.VisualScripting.State.Editor</Name>
@@ -1201,6 +1221,10 @@
     <ProjectReference Include="Meta.WitAi.Conduit.Editor.csproj">
       <Project>{28F9540B-F382-6A89-6C11-DF15DB4B02B2}</Project>
       <Name>Meta.WitAi.Conduit.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.XR.Interaction.Toolkit.Samples.Hands.Editor.csproj">
+      <Project>{204ED6AF-7615-9856-4AFF-4EB81D56ACD8}</Project>
+      <Name>Unity.XR.Interaction.Toolkit.Samples.Hands.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Meta.VoiceSDK.Mic.Common.csproj">
       <Project>{41F40B97-AA71-EA8A-6A78-8DEFA9F3C477}</Project>
@@ -1229,6 +1253,10 @@
     <ProjectReference Include="Unity.VisualScripting.State.csproj">
       <Project>{03566BCA-7750-C778-B155-9D0A9BC4B161}</Project>
       <Name>Unity.VisualScripting.State</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.XR.Interaction.Toolkit.Samples.Hands.csproj">
+      <Project>{08264BA4-5899-1998-E9FC-E0370D93D656}</Project>
+      <Name>Unity.XR.Interaction.Toolkit.Samples.Hands</Name>
     </ProjectReference>
     <ProjectReference Include="Oculus.Interaction.Samples.Editor.csproj">
       <Project>{4F482D81-34E7-C3D7-6EE4-E0E3F7DDB69F}</Project>

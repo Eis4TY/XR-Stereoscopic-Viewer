@@ -6,6 +6,8 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.Video;
 using System.Drawing;
+using UnityEngine.UI;
+
 
 
 public class ContentControl : MonoBehaviour
@@ -38,12 +40,13 @@ public class ContentControl : MonoBehaviour
     public RectTransform ViewWindow;
     [Space]
     public bool isVideo = false;
+    [Space]
     public bool isDepth = false;
 
     [Header("DeepControl")]
-    [Range(0, 10)]
-    public float deepValue = 0;
-    public Vector3 PointPos;
+    [Range(0.0f, 2.5f)]
+    private float deepValue = 0;
+    public GameObject deepSlider;
 
 
     void OnValidate()
@@ -55,11 +58,14 @@ public class ContentControl : MonoBehaviour
     {
         if (isVideo)  //VIDEO
         {
+            deepSlider.SetActive(false);
+            Plane_L.SetFloat("_Bulge", 0);
+            Plane_R.SetFloat("_Bulge", 0);
+
             PlayVideo(planeObj_L, videoURL);
             PlayVideo(planeObj_R, videoURL);
             PlayVideo(InnerWallObj_L, videoURL);
             PlayVideo(InnerWallObj_R, videoURL);
-
         }
         else  //PHOTO
         {
@@ -76,6 +82,7 @@ public class ContentControl : MonoBehaviour
 
             if (isDepth & imgDeep != null)
             {
+                deepSlider.SetActive(true);
                 Plane_L.SetTexture("_Depth", imgDeep);
                 Plane_R.SetTexture("_Depth", imgDeep);
 
@@ -84,6 +91,7 @@ public class ContentControl : MonoBehaviour
             }
             else
             {
+                deepSlider.SetActive(false);
                 Plane_L.SetFloat("_Bulge", 0);
                 Plane_R.SetFloat("_Bulge", 0);
             }
@@ -157,6 +165,8 @@ public class ContentControl : MonoBehaviour
     private string lastVideoURL;
     private float lastDeepValue;
 
+    public float DeepValue { get => deepValue; set => deepValue = value; }
+
     private void Resize(float img_width, float img_height) //设置图像显示的宽高比
     {
         Vector3 scaleValue;
@@ -167,7 +177,7 @@ public class ContentControl : MonoBehaviour
             planeObj_L.transform.localScale = scaleValue;
             planeObj_R.transform.localScale = scaleValue;
             blurMask.localScale = scaleValue;
-            ViewWindow.sizeDelta = new Vector2(((img_width / 2) / img_height) * 0.7f, 0.7f);
+            ViewWindow.sizeDelta = new Vector2(((img_width / 2) / img_height) * 0.8f, 0.8f);
         }
         else
         {
@@ -175,7 +185,7 @@ public class ContentControl : MonoBehaviour
             planeObj_L.transform.localScale = scaleValue;
             planeObj_R.transform.localScale = scaleValue;
             blurMask.localScale = scaleValue;
-            ViewWindow.sizeDelta = new Vector2(0.7f, (img_height / (img_width / 2)) * 0.7f);
+            ViewWindow.sizeDelta = new Vector2(0.8f, (img_height / (img_width / 2)) * 0.8f);
         }
     }
 

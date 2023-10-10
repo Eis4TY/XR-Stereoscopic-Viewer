@@ -7,7 +7,7 @@ using TMPro;
 
 public class IPD_Adjustment : MonoBehaviour
 {
-    public Slider targetSlider; // 引用到你的Slider
+    public Slider targetSlider;
     public TextMeshProUGUI valueText;  
     public Transform leftPlane, rightPlane;
 
@@ -26,14 +26,14 @@ public class IPD_Adjustment : MonoBehaviour
         leftPlane.localPosition = new Vector3(-IPDvalue / 2, 0.0f, 0.0f);
         rightPlane.localPosition = new Vector3(IPDvalue / 2, 0.0f, 0.0f);
 
-        UpdateTextValue(IPDvalue * 10);
+        UpdateTextValue(IPDvalue * 100);
     }
 
     private void UpdateTextValue(float value)
     {
         if (valueText) // 检查是否有TMP文本组件被引用
         {
-            valueText.text = "IPD: " + value.ToString("0.0"); // 这里将数值保留两位小数，你可以按需修改
+            valueText.text = "IPD: " + value.ToString("0"); // 这里将数值保留两位小数，你可以按需修改
         }
     }
 }

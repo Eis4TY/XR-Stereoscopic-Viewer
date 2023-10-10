@@ -182,6 +182,7 @@
     <Compile Include="Assets\Oculus\SampleFramework\Core\Locomotion\Scripts\CharacterCameraConstraint.cs" />
     <Compile Include="Assets\Oculus\SampleFramework\Usage\SpatialAnchor\Scripts\SpatialAnchorLoader.cs" />
     <Compile Include="Assets\Oculus\SampleFramework\Usage\Passthrough\Scripts\SelectivePassthroughExperience.cs" />
+    <Compile Include="Assets\Scripts\Deep_Adjustment.cs" />
     <Compile Include="Assets\Oculus\SampleFramework\Usage\SceneManager\Scripts\SimpleResizer\SimpleResizable.cs" />
     <Compile Include="Assets\Oculus\SampleFramework\Core\HandsInteraction\Scripts\ButtonController.cs" />
     <Compile Include="Assets\Oculus\SampleFramework\Core\Locomotion\Scripts\TeleportTargetHandlerNavMesh.cs" />
@@ -248,6 +249,7 @@
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\Oculus\SampleFramework\Usage\Passthrough\Materials\GlowEffect.shader" />
     <None Include="Assets\Oculus\Voice\Features\Telemetry\Plugins\SDKTelemetry.dll" />
+    <None Include="Assets\Shaders\ImagePlane.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\Oculus\SampleFramework\Usage\HandsTrainExample\Shaders\OculusSampleTrainSmokeShader.shader" />
     <None Include="Assets\Oculus\SampleFramework\Usage\OVROverlayCanvas\Shaders\UI Prerendered Opaque.shader" />
@@ -862,6 +864,10 @@
       <Project>{A9C08240-136E-BF98-20C9-054D6F451A2D}</Project>
       <Name>Oculus.VR.Player</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.XR.Hands.Player.csproj">
+      <Project>{94636E68-0CEE-B7B8-D366-96A36F2C5B5F}</Project>
+      <Name>Unity.XR.Hands.Player</Name>
+    </ProjectReference>
     <ProjectReference Include="Oculus.Interaction.OVR.Player.csproj">
       <Project>{A41EFECE-56EF-BD31-3BA6-EC8ED7336889}</Project>
       <Name>Oculus.Interaction.OVR.Player</Name>
@@ -934,6 +940,10 @@
       <Project>{D39A9BC7-B1C3-DB65-1FB7-943791916BD0}</Project>
       <Name>Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.Player</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.XR.Interaction.Toolkit.Samples.StarterAssets.Player.csproj">
+      <Project>{21C3E37D-D699-DCD0-03C5-14ED225926E6}</Project>
+      <Name>Unity.XR.Interaction.Toolkit.Samples.StarterAssets.Player</Name>
+    </ProjectReference>
     <ProjectReference Include="Meta.WitAi.Conduit.Player.csproj">
       <Project>{94BBB386-0B93-E3E3-FEAE-8CF6DB51C4F1}</Project>
       <Name>Meta.WitAi.Conduit.Player</Name>
@@ -998,6 +1008,10 @@
       <Project>{1B2E5289-2217-19DB-9D26-6859A9121626}</Project>
       <Name>Meta.VoiceSDK.Mic.Other.Player</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.XR.Hands.Samples.VisualizerSample.Player.csproj">
+      <Project>{EED8A979-43E4-1296-C7F1-3C6671CAD3D6}</Project>
+      <Name>Unity.XR.Hands.Samples.VisualizerSample.Player</Name>
+    </ProjectReference>
     <ProjectReference Include="Meta.VoiceSDK.Mic.Common.Player.csproj">
       <Project>{5837E533-A582-7A16-735A-389AF5FA9738}</Project>
       <Name>Meta.VoiceSDK.Mic.Common.Player</Name>
@@ -1009,6 +1023,10 @@
     <ProjectReference Include="Unity.VisualScripting.State.Player.csproj">
       <Project>{156488F9-8001-F15E-B567-12F895BF4156}</Project>
       <Name>Unity.VisualScripting.State.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.XR.Interaction.Toolkit.Samples.Hands.Player.csproj">
+      <Project>{9D4B7F4D-7F28-046E-6488-963C33506FFB}</Project>
+      <Name>Unity.XR.Interaction.Toolkit.Samples.Hands.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Meta.Voice.Hub.Runtime.Player.csproj">
       <Project>{FCC25511-DD68-A8F8-0D7D-BA2BD6C2FF87}</Project>
