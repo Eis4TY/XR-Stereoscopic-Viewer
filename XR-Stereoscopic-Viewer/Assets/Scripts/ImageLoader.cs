@@ -6,14 +6,15 @@ using UnityEngine.Video;
 using System.IO;
 using Meta.Voice.Hub;
 using System.Collections.Generic;
+using System.Linq;
+using TMPro;
+
 
 public class ImageLoader : MonoBehaviour
 {
     public RectTransform container; // 你的UI容器，例如一个ScrollRect的Content
     public GameObject imagePrefab;    // 一个RawImage预制体，用于显示图片
     public bool ReadyToBuild = true;
-
-    public Sprite sprite_video, sprite_photo;
 
     private string folderPath;
     private VideoPlayer videoPlayer; // 视频播放器
@@ -51,7 +52,9 @@ public class ImageLoader : MonoBehaviour
     */
     private void LoadAllImages()
     {
-        string[] imageFiles = Directory.GetFiles(folderPath);
+        string[] imageFiles = Directory.GetFiles(folderPath)
+                                   .OrderBy(filePath => File.GetLastWriteTime(filePath))
+                                   .ToArray();
 
         foreach (string imagePath in imageFiles)
         {
@@ -83,7 +86,7 @@ public class ImageLoader : MonoBehaviour
         if (uwr.result != UnityWebRequest.Result.ConnectionError && uwr.result != UnityWebRequest.Result.DataProcessingError)
         {
             Texture2D RawTexture = DownloadHandlerTexture.GetContent(uwr);
-            Texture2D texture = TextureUtilities.ResizeTexture(RawTexture, 254f);
+            Texture2D texture = TextureUtilities.ResizeTexture(RawTexture, 128f);
             Destroy(RawTexture);
 
             GameObject imageInstance = Instantiate<GameObject>(imagePrefab, container);
@@ -104,7 +107,7 @@ public class ImageLoader : MonoBehaviour
                 imageInstance.GetComponent<MediaAttributes>().HasDepth = false;
             }
 
-            imageInstance.transform.Find("Icon").GetComponent<Image>().sprite = sprite_photo; //替换缩略图Icon
+            imageInstance.transform.Find("Time").GetComponent<TextMeshProUGUI>().text = " "; //显示视频时长
 
             RawImage childRawImage = imageInstance.transform.Find("Img").GetComponent<RawImage>(); 
             childRawImage.uvRect = ResizeTexUVRect(childRawImage, texture);
@@ -150,6 +153,10 @@ public class ImageLoader : MonoBehaviour
             yield return null; // 等待视频准备完毕
         }
 
+        double videoLength = videoPlayer.length;// 获取视频时长
+        string minutes = Mathf.Floor((float)(videoLength / 60)).ToString("00");
+        string seconds = Mathf.Floor((float)(videoLength % 60)).ToString("00");
+
         RenderTexture tempRenderTexture = new RenderTexture((int)videoPlayer.width, (int)videoPlayer.height, 0);
         videoPlayer.targetTexture = tempRenderTexture; // 设置VideoPlayer的目标纹理为新创建的RenderTexture
 
@@ -172,10 +179,10 @@ public class ImageLoader : MonoBehaviour
         GameObject imageInstance = Instantiate<GameObject>(imagePrefab, container);
         imageInstance.GetComponent<MediaAttributes>().ImagePath = "file://" + videoPath;
         imageInstance.GetComponent<MediaAttributes>().IsVideo = true;
+        
+        imageInstance.transform.Find("Time").GetComponent<TextMeshProUGUI>().text = minutes + ":" + seconds; //显示视频时长
 
         RawImage childRawImage = imageInstance.transform.Find("Img").GetComponent<RawImage>();
-
-        imageInstance.transform.Find("Icon").GetComponent<Image>().sprite = sprite_video; //替换缩略图Icon
 
         if (childRawImage != null)
         {

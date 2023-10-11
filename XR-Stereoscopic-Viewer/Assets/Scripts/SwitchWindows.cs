@@ -15,7 +15,7 @@ public class SwitchWindows : MonoBehaviour
         gallery = GameObject.Find("Gallery");
         content.transform.localScale = Vector3.zero;
         gallery.transform.localScale = galleryOrigin;
-        gallery.transform.position = new Vector3(0, 0, 2.05f);
+        gallery.transform.position = new Vector3(0, 0, gallery.transform.position.z);
     }
 
     public void OpenMedia()

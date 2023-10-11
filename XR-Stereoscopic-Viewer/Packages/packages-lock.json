@@ -5,10 +5,10 @@
       "depth": 0,
       "source": "git",
       "dependencies": {
-        "com.unity.xr.interaction.toolkit": "2.0.4",
+        "com.unity.xr.interaction.toolkit": "2.4.1",
         "com.unity.textmeshpro": "3.0.6"
       },
-      "hash": "e8f4e023aa82bbce5a0e361c4a26fc0b4db04b32"
+      "hash": "d609657be9dc1ce796048bd309b4c1ac607473f6"
     },
     "com.unity.collab-proxy": {
       "version": "2.0.7",

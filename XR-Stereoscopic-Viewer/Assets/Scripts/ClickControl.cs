@@ -11,11 +11,14 @@ public class ClickControl : MonoBehaviour
 {
     private ContentControl contentControl;
     private GameObject content;
+    private GameObject GalleryGrid;
 
     private void Start()
     {
         content = GameObject.Find("Content");
         contentControl = content.GetComponent<ContentControl>();
+
+        GalleryGrid = GameObject.Find("Grid");
     }
 
 
@@ -46,8 +49,25 @@ public class ClickControl : MonoBehaviour
             // 应用新纹理
             StartCoroutine(DownloadTexture(url));
         }
+
+        //设置媒体index
+        contentControl.MediaObjs.Clear(); //清空list
+        LoadGallery(GalleryGrid.transform);
+        contentControl.CurrentIndex = contentControl.MediaObjs.IndexOf(this.gameObject);
+        Debug.Log($"包含{contentControl.MediaObjs.Count}个媒体，当前是第{contentControl.CurrentIndex}个");
     }
 
+    private void LoadGallery(Transform parent) //加载相册
+    {
+        for (int i = 0; i < parent.childCount; i++)
+        {
+            Transform child = parent.GetChild(i);
+            if (child.gameObject.activeSelf)  // 或者使用 child.gameObject.activeInHierarchy
+            {
+                contentControl.MediaObjs.Add(child.gameObject);
+            }
+        }
+    }
 
     private IEnumerator DownloadTexture(string Url) //加载图片
     {

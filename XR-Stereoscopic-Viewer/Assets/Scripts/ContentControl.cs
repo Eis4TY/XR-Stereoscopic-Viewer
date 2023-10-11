@@ -48,6 +48,8 @@ public class ContentControl : MonoBehaviour
     private float deepValue = 0;
     public GameObject deepSlider;
 
+    private List<GameObject> mediaObjs = new List<GameObject>();
+    private int currentIndex = -1;
 
     void OnValidate()
     {
@@ -166,6 +168,8 @@ public class ContentControl : MonoBehaviour
     private float lastDeepValue;
 
     public float DeepValue { get => deepValue; set => deepValue = value; }
+    public int CurrentIndex { get => currentIndex; set => currentIndex = value; }
+    public List<GameObject> MediaObjs { get => mediaObjs; set => mediaObjs = value; }
 
     private void Resize(float img_width, float img_height) //设置图像显示的宽高比
     {
