@@ -6,6 +6,7 @@ using UnityEngine.Networking;
 public class PlayNext : MonoBehaviour
 {
     public ContentControl contentControl;
+    private Texture2D downloadedTexture, downloadedTexture_D;
 
     public void LastMedia()
     {
@@ -72,8 +73,14 @@ public class PlayNext : MonoBehaviour
         using (UnityWebRequest uwr = UnityWebRequestTexture.GetTexture(Url))
         {
             yield return uwr.SendWebRequest();
+            //删除旧纹理
+            if (downloadedTexture != null)
+            {
+                Destroy(downloadedTexture);
+                downloadedTexture = null;
+            }
             // 获取下载的纹理
-            Texture2D downloadedTexture = DownloadHandlerTexture.GetContent(uwr);
+            downloadedTexture = DownloadHandlerTexture.GetContent(uwr);
             // 应用新纹理
             contentControl.Set_img(downloadedTexture);
         }
@@ -83,10 +90,16 @@ public class PlayNext : MonoBehaviour
         using (UnityWebRequest uwr = UnityWebRequestTexture.GetTexture(Url))
         {
             yield return uwr.SendWebRequest();
+            //删除旧纹理
+            if (downloadedTexture_D != null)
+            {
+                Destroy(downloadedTexture_D);
+                downloadedTexture_D = null;
+            }
             // 获取下载的纹理
-            Texture2D downloadedTexture = DownloadHandlerTexture.GetContent(uwr);
+            downloadedTexture_D = DownloadHandlerTexture.GetContent(uwr);
             // 应用新纹理
-            contentControl.Set_imgDeep(downloadedTexture);
+            contentControl.Set_imgDeep(downloadedTexture_D);
         }
     }
 }

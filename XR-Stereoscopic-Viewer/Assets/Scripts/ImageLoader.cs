@@ -52,7 +52,7 @@ public class ImageLoader : MonoBehaviour
     */
     private void LoadAllImages()
     {
-        string[] imageFiles = Directory.GetFiles(folderPath)
+        string[] imageFiles = Directory.GetFiles(folderPath, "*.*", SearchOption.AllDirectories)
                                    .OrderBy(filePath => File.GetLastWriteTime(filePath))
                                    .ToArray();
 
@@ -86,7 +86,7 @@ public class ImageLoader : MonoBehaviour
         if (uwr.result != UnityWebRequest.Result.ConnectionError && uwr.result != UnityWebRequest.Result.DataProcessingError)
         {
             Texture2D RawTexture = DownloadHandlerTexture.GetContent(uwr);
-            Texture2D texture = TextureUtilities.ResizeTexture(RawTexture, 128f);
+            Texture2D texture = TextureUtilities.ResizeTexture(RawTexture, 256f);
             Destroy(RawTexture);
 
             GameObject imageInstance = Instantiate<GameObject>(imagePrefab, container);
@@ -162,6 +162,7 @@ public class ImageLoader : MonoBehaviour
 
         Texture2D videoFrame = new Texture2D((int)videoPlayer.width, (int)videoPlayer.height);
         videoPlayer.frame = 0; // 获取视频的第一帧
+        videoPlayer.SetDirectAudioMute(0, true); //静音
         videoPlayer.Play();
 
         while (videoPlayer.isPlaying)
@@ -204,14 +205,26 @@ public class ImageLoader : MonoBehaviour
             float aspectRatio = (float)texture.width / texture.height;
             Rect newUVRect = childRawImage.uvRect;
 
-            newUVRect.width = (float)texture.height / texture.width;
-            if (aspectRatio > 2f)
+            if (aspectRatio > 2f) //横向图像
             {
                 newUVRect.x = 0.25f - (newUVRect.width / 2.0f);
-            }
-            else
+                newUVRect.y = 0f;
+                newUVRect.width = (float)texture.height / texture.width;
+                newUVRect.height = 1f;
+
+            }else if (aspectRatio == 2f) //方形图像
             {
-                newUVRect.x = (newUVRect.width / 2.0f) - 0.25f;
+                newUVRect.x = 0f;
+                newUVRect.y = 0f;
+                newUVRect.width = 0.5f;
+                newUVRect.height = 1f;
+            }
+            else //竖向图像
+            {
+                newUVRect.x = 0f;
+                newUVRect.y = 0.33f;
+                newUVRect.width = 0.5f;
+                newUVRect.height = 0.66f;
             }
 
             return newUVRect;
