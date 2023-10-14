@@ -1050,13 +1050,13 @@
       <Project>{F80F8AED-6394-5602-1319-AB7E12F7C35A}</Project>
       <Name>Meta.Voice.Samples.Dictation</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.MemoryProfiler.csproj">
+      <Project>{53FA45C3-72FA-1920-9C14-C75D2B29A0BC}</Project>
+      <Name>Unity.MemoryProfiler</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.csproj">
       <Project>{21692A85-7695-FD07-6578-96FB7FA29827}</Project>
       <Name>Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.XR.Interaction.Toolkit.Samples.StarterAssets.csproj">
-      <Project>{A8B00BB3-2044-14EB-CC94-8923B9EAF683}</Project>
-      <Name>Unity.XR.Interaction.Toolkit.Samples.StarterAssets</Name>
     </ProjectReference>
     <ProjectReference Include="Meta.WitAi.Conduit.csproj">
       <Project>{9C2084AA-693B-EEC5-819D-EDFAE5E6BBBF}</Project>
@@ -1066,9 +1066,9 @@
       <Project>{F60D0FA4-D4EF-E1BF-898F-4150099757FB}</Project>
       <Name>Unity.EditorCoroutines.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.MemoryProfiler.csproj">
-      <Project>{53FA45C3-72FA-1920-9C14-C75D2B29A0BC}</Project>
-      <Name>Unity.MemoryProfiler</Name>
+    <ProjectReference Include="Unity.XR.Interaction.Toolkit.Samples.StarterAssets.csproj">
+      <Project>{A8B00BB3-2044-14EB-CC94-8923B9EAF683}</Project>
+      <Name>Unity.XR.Interaction.Toolkit.Samples.StarterAssets</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.MemoryProfiler.Editor.MemoryProfilerModule.csproj">
       <Project>{502CA306-7020-F0DA-C615-6BB9FFAF0B15}</Project>

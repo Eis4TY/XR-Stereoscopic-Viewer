@@ -114,8 +114,8 @@
     <Compile Include="Library\PackageCache\com.unity.memoryprofiler@1.0.0\Editor\UI\Analysis\Breakdowns\Shared\Comparison\Data\ComparisonTableModel.cs" />
     <Compile Include="Library\PackageCache\com.unity.memoryprofiler@1.0.0\Editor\MemorySnapshot\Format\QueriedSnapshot\ReadError.cs" />
     <Compile Include="Library\PackageCache\com.unity.memoryprofiler@1.0.0\Editor\UI\SplitterStateEx.cs" />
-    <Compile Include="Library\PackageCache\com.unity.memoryprofiler@1.0.0\Editor\UI\MeshBuilder.cs" />
     <Compile Include="Library\PackageCache\com.unity.memoryprofiler@1.0.0\Editor\UI\DetailViewController.cs" />
+    <Compile Include="Library\PackageCache\com.unity.memoryprofiler@1.0.0\Editor\UI\MeshBuilder.cs" />
     <Compile Include="Library\PackageCache\com.unity.memoryprofiler@1.0.0\Editor\UI\Styles.cs" />
     <Compile Include="Library\PackageCache\com.unity.memoryprofiler@1.0.0\Editor\UI\Analysis\Breakdowns\Summary\Widgets\IMemoryBreakdownViewController.cs" />
     <Compile Include="Library\PackageCache\com.unity.memoryprofiler@1.0.0\Editor\MemorySnapshot\Format\LowLevel\ReadCommandBufferUtils.cs" />

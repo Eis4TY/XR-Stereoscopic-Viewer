@@ -151,8 +151,8 @@
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Runtime\VisualScripting.Flow\Framework\Math\Divide.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Runtime\VisualScripting.Flow\Framework\Math\Vector3\Vector3PerSecond.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Runtime\VisualScripting.Flow\Framework\Math\Scalar\ScalarMinimum.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Runtime\VisualScripting.Flow\Framework\Math\CrossProduct.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Runtime\VisualScripting.Flow\Framework\Events\Lifecycle\FixedUpdate.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Runtime\VisualScripting.Flow\Framework\Math\CrossProduct.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Runtime\VisualScripting.Flow\Framework\Events\Input\OnMouseUpAsButton.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Runtime\VisualScripting.Flow\Ports\UnitPortCollection.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Runtime\VisualScripting.Flow\EditorBinding\UnitHeaderInspectableAttribute.cs" />

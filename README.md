@@ -14,7 +14,7 @@ Bring the experience of the Photos App in Apple Vision Pro to the META Quest ser
 - [x]  Spatial video view
 - [x]  IPD adjustment
 - [x]  Import local files
-- [x]  spatial UI
+- [x]  Spatial UI
 - [x]  Bump mapping
 - [x]  Window transform adjustment
 - [ ]  MR mode
@@ -28,7 +28,7 @@ Bring the experience of the Photos App in Apple Vision Pro to the META Quest ser
 
 ## Getting Started
 
-1. Download the [APK](https://github.com/Eis4TY/XR-Stereoscopic-Viewer/releases/tag/untagged-be370450fe70331744f1).
+1. Download the [APK](https://github.com/Eis4TY/XR-Stereoscopic-Viewer/releases).
 2. Connect Quest to computer, use SideQuest or other ADB tools to install it.
 3. Download [‘Media’](https://github.com/Eis4TY/XR-Stereoscopic-Viewer/releases/tag/MediaFile) file and Unzip folder to the ‘Media’ folder.
 4. "Place the ‘Media’ folder into the ‘Android.Eis4TY.XRStereoscopicViewer’ directory. (If you can’t see this folder, please open the app once, then close it and try again)
@@ -38,7 +38,7 @@ Bring the experience of the Photos App in Apple Vision Pro to the META Quest ser
 
 ## Getting Started (ZH)
 
-1. 下载 [APP](https://github.com/Eis4TY/XR-Stereoscopic-Viewer/releases/tag/untagged-be370450fe70331744f1)。
+1. 下载 [APP](https://github.com/Eis4TY/XR-Stereoscopic-Viewer/releases)。
 2. 将头显连接到计算机并运行访问文件，使用SideQuest或其他ADB工具来安装 APP。
 3. 下载 [‘Media’](https://github.com/Eis4TY/XR-Stereoscopic-Viewer/releases/tag/MediaFile) 文件并解压到 ‘Media’ 文件夹。
 4. 将 ‘Media’ 文件夹放入 “Android.Eis4TY.XRStereoscopicViewer” 文件夹中 (如果你看不到这个文件夹，请先打开一次 APP，然后关闭再试)。
@@ -52,10 +52,14 @@ Bring the experience of the Photos App in Apple Vision Pro to the META Quest ser
 
 ## How to build?
 
-Work in progress.
+Get the XR-Stereoscopic-Viewer open-source application running on your own devices.
+
+1. Clone this project.
+2. Open the project with Unity 2022.3.9f1 (Android Build).
+3. Navigate to **File > Build Settings...**, select the **Android** platform, then select your Meta Quest Pro as the **Run device** (if it's plugged in) and then click on **Build and Run**.
 
 ## Acknowledgements
 
-- Thanks to @HW君 for the blowing out candles video.
+- Thanks to [@HW君](https://space.bilibili.com/40043075?spm_id_from=333.337.0.0) for the blowing out candles video.
 - Thanks to @Mr.Maginary for the stereoscopic photos.
 - Thank to [@jetstyle](https://github.com/jetstyle) for the visionOS UI https://github.com/jetstyle/Apple-Vision-Pro-UI-Kit
