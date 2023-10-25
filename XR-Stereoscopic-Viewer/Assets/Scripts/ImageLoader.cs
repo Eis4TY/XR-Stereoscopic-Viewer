@@ -9,7 +9,6 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 
-
 public class ImageLoader : MonoBehaviour
 {
     public RectTransform container; // 你的UI容器，例如一个ScrollRect的Content
@@ -56,24 +55,39 @@ public class ImageLoader : MonoBehaviour
                                    .OrderBy(filePath => File.GetLastWriteTime(filePath))
                                    .ToArray();
 
-        foreach (string imagePath in imageFiles)
-        {
-            string extension = Path.GetExtension(imagePath).ToLower();
-            string filenameWithoutExtension = Path.GetFileNameWithoutExtension(imagePath);
+        StartCoroutine(LoadImagesInBatches(imageFiles, 2)); // 以2个文件为一批进行加载
 
-            if (extension == ".png" || extension == ".jpg")
+    }
+
+    IEnumerator LoadImagesInBatches(string[] imageFiles, int batchSize)
+    {
+        int currentBatch = 0;
+
+        while (currentBatch * batchSize < imageFiles.Length)
+        {
+            int batchEnd = Mathf.Min((currentBatch + 1) * batchSize, imageFiles.Length);
+            for (int i = currentBatch * batchSize; i < batchEnd; i++)
             {
-                // 判断是否是深度图
-                if (!filenameWithoutExtension.EndsWith("_D"))
+                string imagePath = imageFiles[i];
+                string extension = Path.GetExtension(imagePath).ToLower();
+                string filenameWithoutExtension = Path.GetFileNameWithoutExtension(imagePath);
+
+                if (extension == ".png" || extension == ".jpg")
                 {
-                    StartCoroutine(LoadImage(imagePath, imageFiles)); 
+                    // 判断是否是深度图
+                    if (!filenameWithoutExtension.EndsWith("_D"))
+                    {
+                        StartCoroutine(LoadImage(imagePath, imageFiles));
+                    }
+                }
+                else if (extension == ".mp4")
+                {
+                    //StartCoroutine(LoadThumbnailFromVideo(imagePath));
+                    AddVideoToQueue(imagePath);
                 }
             }
-            else if (extension == ".mp4")
-            {
-                //StartCoroutine(LoadThumbnailFromVideo(imagePath));
-                AddVideoToQueue(imagePath);
-            }
+            currentBatch++;
+            yield return null; // 等待一帧或根据需要更长时间
         }
     }
 

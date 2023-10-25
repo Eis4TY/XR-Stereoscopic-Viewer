@@ -112,6 +112,7 @@
     <Compile Include="Assets\Oculus\SampleFramework\Usage\Passthrough\Scripts\GrabObject.cs" />
     <Compile Include="Assets\Oculus\SampleFramework\Core\DistanceGrab\Scripts\PauseOnInputLoss.cs" />
     <Compile Include="Assets\Oculus\SampleFramework\Usage\TouchPro\Scripts\StylusTip\StylusTip.cs" />
+    <Compile Include="Assets\Scripts\SwitchEnvironment.cs" />
     <Compile Include="Assets\Oculus\SampleFramework\Core\DebugUI\Scripts\DebugUIBuilder.cs" />
     <Compile Include="Assets\Oculus\SampleFramework\Usage\TouchPro\Scripts\Ui\UiBoolInspector.cs" />
     <Compile Include="Assets\Oculus\SampleFramework\Usage\SceneManager\Scripts\BouncingBallMgr.cs" />
@@ -939,21 +940,17 @@
       <Project>{B88D2408-1D51-3062-B659-9CDD694DE32D}</Project>
       <Name>Meta.Voice.Samples.Dictation.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.MemoryProfiler.Player.csproj">
-      <Project>{6846C102-245E-D1C6-D794-7D335528AF2F}</Project>
-      <Name>Unity.MemoryProfiler.Player</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.Player.csproj">
       <Project>{D39A9BC7-B1C3-DB65-1FB7-943791916BD0}</Project>
       <Name>Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="Meta.WitAi.Conduit.Player.csproj">
-      <Project>{94BBB386-0B93-E3E3-FEAE-8CF6DB51C4F1}</Project>
-      <Name>Meta.WitAi.Conduit.Player</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.XR.Interaction.Toolkit.Samples.StarterAssets.Player.csproj">
       <Project>{21C3E37D-D699-DCD0-03C5-14ED225926E6}</Project>
       <Name>Unity.XR.Interaction.Toolkit.Samples.StarterAssets.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Meta.WitAi.Conduit.Player.csproj">
+      <Project>{94BBB386-0B93-E3E3-FEAE-8CF6DB51C4F1}</Project>
+      <Name>Meta.WitAi.Conduit.Player</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.XR.LegacyInputHelpers.Player.csproj">
       <Project>{51669DBA-5B36-D64A-1CB1-B993E80FB8F5}</Project>

@@ -112,6 +112,7 @@
     <Compile Include="Assets\Oculus\SampleFramework\Usage\Passthrough\Scripts\GrabObject.cs" />
     <Compile Include="Assets\Oculus\SampleFramework\Core\DistanceGrab\Scripts\PauseOnInputLoss.cs" />
     <Compile Include="Assets\Oculus\SampleFramework\Usage\TouchPro\Scripts\StylusTip\StylusTip.cs" />
+    <Compile Include="Assets\Scripts\SwitchEnvironment.cs" />
     <Compile Include="Assets\Oculus\SampleFramework\Core\DebugUI\Scripts\DebugUIBuilder.cs" />
     <Compile Include="Assets\Oculus\SampleFramework\Usage\TouchPro\Scripts\Ui\UiBoolInspector.cs" />
     <Compile Include="Assets\Oculus\SampleFramework\Usage\SceneManager\Scripts\BouncingBallMgr.cs" />
@@ -1087,13 +1088,13 @@
       <Project>{F80F8AED-6394-5602-1319-AB7E12F7C35A}</Project>
       <Name>Meta.Voice.Samples.Dictation</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.MemoryProfiler.csproj">
-      <Project>{53FA45C3-72FA-1920-9C14-C75D2B29A0BC}</Project>
-      <Name>Unity.MemoryProfiler</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.csproj">
       <Project>{21692A85-7695-FD07-6578-96FB7FA29827}</Project>
       <Name>Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.XR.Interaction.Toolkit.Samples.StarterAssets.csproj">
+      <Project>{A8B00BB3-2044-14EB-CC94-8923B9EAF683}</Project>
+      <Name>Unity.XR.Interaction.Toolkit.Samples.StarterAssets</Name>
     </ProjectReference>
     <ProjectReference Include="Meta.WitAi.Conduit.csproj">
       <Project>{9C2084AA-693B-EEC5-819D-EDFAE5E6BBBF}</Project>
@@ -1102,14 +1103,6 @@
     <ProjectReference Include="Unity.EditorCoroutines.Editor.csproj">
       <Project>{F60D0FA4-D4EF-E1BF-898F-4150099757FB}</Project>
       <Name>Unity.EditorCoroutines.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.XR.Interaction.Toolkit.Samples.StarterAssets.csproj">
-      <Project>{A8B00BB3-2044-14EB-CC94-8923B9EAF683}</Project>
-      <Name>Unity.XR.Interaction.Toolkit.Samples.StarterAssets</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.MemoryProfiler.Editor.MemoryProfilerModule.csproj">
-      <Project>{502CA306-7020-F0DA-C615-6BB9FFAF0B15}</Project>
-      <Name>Unity.MemoryProfiler.Editor.MemoryProfilerModule</Name>
     </ProjectReference>
     <ProjectReference Include="VoiceSDK.Dictation.Editor.csproj">
       <Project>{AB46A5F7-0D28-2525-0612-FBF75EB14BDD}</Project>
@@ -1242,10 +1235,6 @@
     <ProjectReference Include="Unity.VisualScripting.SettingsProvider.Editor.csproj">
       <Project>{88E37CDC-CCD9-8425-3CEC-C90DC2CEBE4C}</Project>
       <Name>Unity.VisualScripting.SettingsProvider.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.MemoryProfiler.Editor.csproj">
-      <Project>{96761577-DB18-FD4D-B6E9-58592C197D78}</Project>
-      <Name>Unity.MemoryProfiler.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.csproj">
       <Project>{10CC0367-2B07-6D86-02BB-5DE1A8BFB14E}</Project>

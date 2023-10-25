@@ -175,22 +175,11 @@ public class ContentControl : MonoBehaviour
     {
         Vector3 scaleValue;
 
-        if (img_width / 2 > img_height)
-        {
-            scaleValue = new Vector3((img_width / 2) / img_height, 1, 1);
-            planeObj_L.transform.localScale = scaleValue;
-            planeObj_R.transform.localScale = scaleValue;
-            blurMask.localScale = scaleValue;
-            ViewWindow.sizeDelta = new Vector2(((img_width / 2) / img_height) * 0.8f, 0.8f);
-        }
-        else
-        {
-            scaleValue = new Vector3(1, img_height / (img_width / 2), 1);
-            planeObj_L.transform.localScale = scaleValue;
-            planeObj_R.transform.localScale = scaleValue;
-            blurMask.localScale = scaleValue;
-            ViewWindow.sizeDelta = new Vector2(0.8f, (img_height / (img_width / 2)) * 0.8f);
-        }
+        scaleValue = new Vector3((img_width / 2) / img_height, 1, 1);
+        planeObj_L.transform.localScale = scaleValue;
+        planeObj_R.transform.localScale = scaleValue;
+        blurMask.localScale = scaleValue;
+        ViewWindow.sizeDelta = new Vector2(((img_width / 2) / img_height) * 0.8f, 0.8f);
     }
 
     public void Set_img(Texture2D image)
