@@ -1,6 +1,6 @@
 # README
 
-# PCIO版使用说明
+# PCIO版使用说明（v0.1.5）
 
 1. 受邀测试用户收到短信后，可点击短信中的链接获取测试应用。
 
@@ -14,10 +14,8 @@
 
 6. 下载 [‘Media’](https://github.com/Eis4TY/XR-Stereoscopic-Viewer/releases/tag/MediaFile) 文件并解压到 ‘Media’ 文件夹。
 
-7. 将 ‘Media’ 文件夹放入 “\Android\data\com.Eis4TY.SpaceZoetrope\files” 文件夹中 (如果你看不到这个文件夹，请先打开一次 APP，然后关闭再试)。
+7. 将`.jpg`和`.png`和`.mp4`格式的 3D媒体 文件夹放入 PICO主储存空间 “/Pictures/3dMedia” 文件夹中 (如果你看不到这个文件夹，请先打开一次 APP，然后关闭再试)。
 
-8. 或在此处新建一个名为 “Media” 的文件夹，然后将你的立体照片和立体视频放入文件夹，程序目前支持`.jpg`和`.png`和`.mp4`格式
+8. 打开 APP 并欣赏。(目前程序还不够完善，可能会遇到一些 bug)
 
-9. 打开 APP 并欣赏。(目前程序还不够完善，可能会遇到一些 bug)
-
-10. 调整窗口位置、旋转功能 (瞄准窗口底部小横条，按住手柄抓握键)
+9. 调整窗口位置、旋转功能 (瞄准窗口底部小横条，按住手柄抓握键)
