@@ -68,6 +68,10 @@ public class ContentControl : MonoBehaviour
             PlayVideo(planeObj_R, videoURL);
             PlayVideo(InnerWallObj_L, videoURL);
             PlayVideo(InnerWallObj_R, videoURL);
+
+            planeObj_L.GetComponent<VideoPlayer>().SetDirectAudioMute(0, false);
+            planeObj_L.GetComponent<VideoPlayer>().SetDirectAudioVolume(0, 1.0f); // 设置音轨的音量为最大
+
         }
         else  //PHOTO
         {
@@ -161,6 +165,11 @@ public class ContentControl : MonoBehaviour
             lastDeepValue = deepValue;
             lastVideoURL = videoURL;
         }
+    }
+
+    public void foceUpdateContent()
+    {
+        ChangeContent();
     }
     
     private Texture lastImg;

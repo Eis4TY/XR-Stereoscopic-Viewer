@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Video;
 
 public class SwitchWindows : MonoBehaviour
 {
+    private GameObject planeL; //πÿ±’ ”∆µ≤•∑≈
     private GameObject content;
     private GameObject gallery;
     private Vector3 galleryOrigin = new Vector3 (0.002f, 0.002f, 0.002f);
@@ -36,5 +38,9 @@ public class SwitchWindows : MonoBehaviour
         content.transform.localScale = Vector3.zero;
         gallery.transform.localScale = galleryOrigin;
         gallery.transform.Find("GalleryWindow").localScale = Vector3.one;
+
+        planeL = GameObject.Find("Plane_left");
+        planeL.GetComponent<VideoPlayer>().SetDirectAudioMute(0, true);
+
     }
 }

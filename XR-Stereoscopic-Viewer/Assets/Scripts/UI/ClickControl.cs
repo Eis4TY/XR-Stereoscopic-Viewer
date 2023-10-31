@@ -33,6 +33,7 @@ public class ClickControl : MonoBehaviour
         {
             contentControl.Set_isVideo(true);
             contentControl.Set_videoURL(url);
+            contentControl.foceUpdateContent();
         }
         else
         {

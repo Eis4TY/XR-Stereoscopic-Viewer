@@ -9652,12 +9652,14 @@ VideoPlayer:
   m_TimeUpdateMode: 1
   m_PlaybackSpeed: 1
   m_AudioOutputMode: 2
-  m_TargetAudioSources: []
-  m_DirectAudioVolumes: []
+  m_TargetAudioSources:
+  - {fileID: 0}
+  m_DirectAudioVolumes:
+  - 1
   m_Url: 
-  m_EnabledAudioTracks: 
-  m_DirectAudioMutes: 
-  m_ControlledAudioTrackCount: 0
+  m_EnabledAudioTracks: 01
+  m_DirectAudioMutes: 00
+  m_ControlledAudioTrackCount: 1
   m_PlayOnAwake: 1
   m_SkipOnDrop: 1
   m_Looping: 1
@@ -15087,6 +15089,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebf0d3d47d1834f4c83e2534431e7796, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  videoPlaceholder: {fileID: 2800000, guid: 1ca2a3981ddfdd047b5d69d17d2abe96, type: 3}
   container: {fileID: 2283021177489954}
   imagePrefab: {fileID: 1957900019314291610, guid: c14d77fbabf05b646907167c12aa3fc2, type: 3}
   ReadyToBuild: 1
@@ -15652,7 +15655,7 @@ VideoPlayer:
   m_DataSource: 1
   m_TimeUpdateMode: 1
   m_PlaybackSpeed: 1
-  m_AudioOutputMode: 2
+  m_AudioOutputMode: 0
   m_TargetAudioSources: []
   m_DirectAudioVolumes: []
   m_Url: 
@@ -16084,7 +16087,7 @@ VideoPlayer:
   m_DataSource: 1
   m_TimeUpdateMode: 1
   m_PlaybackSpeed: 1
-  m_AudioOutputMode: 2
+  m_AudioOutputMode: 0
   m_TargetAudioSources: []
   m_DirectAudioVolumes: []
   m_Url: 
@@ -16320,7 +16323,7 @@ VideoPlayer:
   m_DataSource: 1
   m_TimeUpdateMode: 1
   m_PlaybackSpeed: 1
-  m_AudioOutputMode: 2
+  m_AudioOutputMode: 0
   m_TargetAudioSources: []
   m_DirectAudioVolumes: []
   m_Url: 

@@ -11,6 +11,7 @@ using TMPro;
 
 public class ImageLoader : MonoBehaviour
 {
+    public Texture2D videoPlaceholder;
     public RectTransform container; // 你的UI容器，例如一个ScrollRect的Content
     public GameObject imagePrefab;    // 一个RawImage预制体，用于显示图片
     public bool ReadyToBuild = true;
@@ -157,6 +158,21 @@ public class ImageLoader : MonoBehaviour
     }
     private IEnumerator LoadThumbnailFromVideo(string videoPath)
     {
+        //创建实例
+        GameObject imageInstance = Instantiate<GameObject>(imagePrefab, container);
+        imageInstance.GetComponent<MediaAttributes>().ImagePath = "file://" + videoPath;
+        imageInstance.GetComponent<MediaAttributes>().IsVideo = true;
+
+
+        RawImage childRawImage = imageInstance.transform.Find("Img").GetComponent<RawImage>();
+
+        if (childRawImage != null)
+        {
+            childRawImage.texture = videoPlaceholder;
+            //childRawImage.uvRect = ResizeTexUVRect(childRawImage, videoPlaceholder);
+        }
+
+        //加载视频
         videoPlayer.source = VideoSource.Url;
         videoPlayer.url = videoPath;
         videoPlayer.playOnAwake = false;
@@ -170,6 +186,7 @@ public class ImageLoader : MonoBehaviour
         double videoLength = videoPlayer.length;// 获取视频时长
         string minutes = Mathf.Floor((float)(videoLength / 60)).ToString("00");
         string seconds = Mathf.Floor((float)(videoLength % 60)).ToString("00");
+        imageInstance.transform.Find("Time").GetComponent<TextMeshProUGUI>().text = minutes + ":" + seconds; //显示视频时长
 
         RenderTexture tempRenderTexture = new RenderTexture((int)videoPlayer.width, (int)videoPlayer.height, 0);
         videoPlayer.targetTexture = tempRenderTexture; // 设置VideoPlayer的目标纹理为新创建的RenderTexture
@@ -177,13 +194,9 @@ public class ImageLoader : MonoBehaviour
         Texture2D videoFrame = new Texture2D((int)videoPlayer.width, (int)videoPlayer.height);
         videoPlayer.frame = 0; // 获取视频的第一帧
         videoPlayer.SetDirectAudioMute(0, true); //静音
+
         videoPlayer.Play();
-
-        while (videoPlayer.isPlaying)
-        {
-            yield return null; // 等待一帧时间
-        }
-
+        yield return new WaitForSeconds(0.5f); //等待0.1秒以确保第一帧被渲染
         videoPlayer.Stop();
 
         RenderTexture.active = tempRenderTexture;  // 设置tempRenderTexture为当前活跃的RenderTexture
@@ -191,19 +204,9 @@ public class ImageLoader : MonoBehaviour
 
         videoFrame.Apply();
 
-        GameObject imageInstance = Instantiate<GameObject>(imagePrefab, container);
-        imageInstance.GetComponent<MediaAttributes>().ImagePath = "file://" + videoPath;
-        imageInstance.GetComponent<MediaAttributes>().IsVideo = true;
-        
-        imageInstance.transform.Find("Time").GetComponent<TextMeshProUGUI>().text = minutes + ":" + seconds; //显示视频时长
-
-        RawImage childRawImage = imageInstance.transform.Find("Img").GetComponent<RawImage>();
-
-        if (childRawImage != null)
-        {
-            childRawImage.texture = videoFrame;
-            childRawImage.uvRect = ResizeTexUVRect(childRawImage, videoFrame);
-        }
+        //用实际的缩略图替代占位图
+        childRawImage.texture = videoFrame;
+        childRawImage.uvRect = ResizeTexUVRect(childRawImage, videoFrame);
 
         // 释放资源
         videoPlayer.targetTexture = null;
