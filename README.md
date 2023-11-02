@@ -8,7 +8,7 @@ A VisionOS style viewer of Spatial Video and Spatial image in XR devices.
 
 Bring the experience of the Photos App in Apple Vision Pro to the META Quest series headset, with support for Spatial Video and Spatial image. This Project aims to showcase the stereoscopic imaging solution of Apple, allowing us to immerse in its charm in advance.
 
-[[Watch the video]([/ProjectTrailer/video_thumbnail.png](https://github.com/Eis4TY/XR-Stereoscopic-Viewer/blob/main/ProjectTrailer/video_thumbnail.png))]([https://github.com/Eis4TY/XR-Stereoscopic-Viewer/blob/main/ProjectTrailer/Trailer.mp4](https://github.com/Eis4TY/XR-Stereoscopic-Viewer/blob/main/ProjectTrailer/Trailer.mp4))
+[[Watch the video]([/ProjectTrailer/video_thumbnail.png](/ProjectTrailer/video_thumbnail.png))]([https://github.com/Eis4TY/XR-Stereoscopic-Viewer/blob/main/ProjectTrailer/Trailer.mp4](https://github.com/Eis4TY/XR-Stereoscopic-Viewer/blob/main/ProjectTrailer/Trailer.mp4))
 
 ## Features
 
@@ -28,6 +28,7 @@ Bring the experience of the Photos App in Apple Vision Pro to the META Quest ser
 
 - **🧰** [Stereoscopic Toolbox](https://github.com/Eis4TY/XR-Stereoscopic-Viewer/discussions/8)
 - **📺** [3D media sharing](https://github.com/Eis4TY/XR-Stereoscopic-Viewer/discussions/9)
+
 
 ## Getting Started
 
