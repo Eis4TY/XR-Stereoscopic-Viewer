@@ -294,6 +294,17 @@
                 },
                 {
                     "name": "",
+                    "id": "93b37b31-3a94-4693-9883-6c62cd1ce6ec",
+                    "path": "<XRController>/{TriggerButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Select",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "49a23327-a116-48c0-8af9-0d2c50c15a88",
                     "path": "<XRController>{LeftHand}/grip",
                     "interactions": "",
@@ -806,6 +817,17 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Generic XR Controller",
+                    "action": "Select",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "080e8e52-bf76-48c6-a573-d875a954662d",
+                    "path": "<XRController>/{TriggerButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Continuous Move;Generic XR Controller",
                     "action": "Select",
                     "isComposite": false,
                     "isPartOfComposite": false

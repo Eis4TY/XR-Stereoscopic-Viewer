@@ -1,46 +1,62 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
+using UnityEngine.UI;
+using Unity.VisualScripting;
 using UnityEngine.Video;
 
 public class SwitchWindows : MonoBehaviour
 {
-    private GameObject planeL; //πÿ±’ ”∆µ≤•∑≈
+    public float scaleDuration = 0.3f;
+
     private GameObject content;
     private GameObject gallery;
-    private Vector3 galleryOrigin = new Vector3 (0.002f, 0.002f, 0.002f);
-    private Vector3 contentOrigin = new Vector3(3f, 3f, 3f);
+    private GameObject settings;
+    private GalleryTransform galleryTransform;
 
+    private Vector3 galleryOrigin = Vector3.one;
+    private Vector3 contentOrigin = new Vector3(1250, 1250, 1250);
+    private Vector3 settingsOrigin = new Vector3(0.75f, 0.75f, 0.75f);
     private Vector3 gallerySmall = new Vector3(0.0001f, 0.0001f, 0.0001f);
 
     void Start()
     {
         content = GameObject.Find("Content");
         gallery = GameObject.Find("Gallery");
-        content.transform.localScale = Vector3.zero;
+        settings = GameObject.Find("Settings");
+        content.transform.localScale = gallerySmall;
         gallery.transform.localScale = galleryOrigin;
-        gallery.transform.position = new Vector3(0, 0, gallery.transform.position.z);
+        settings.transform.localScale = gallerySmall;
+        //gallery.transform.position = new Vector3(0, 0, gallery.transform.position.z);
     }
 
     public void OpenMedia()
     {
         content = GameObject.Find("Content");
         gallery = GameObject.Find("Gallery");
-        content.transform.localScale = contentOrigin;
-        gallery.transform.localScale = gallerySmall;
-        gallery.transform.Find("GalleryWindow").localScale = gallerySmall;
+        settings = GameObject.Find("Settings");
+        galleryTransform = GameObject.Find("SwitchWindows").GetComponent<GalleryTransform>();
+        galleryTransform.SetGallerySmall();
+
+        content.transform.localScale = new Vector3(1250, 1250, 1250);
+        Debug.Log("$$$$$$$content=" + content.transform.localScale.x);
+
+        settings.transform.localScale = settingsOrigin;
     }
 
     public void CloseMedia()
     {
         content = GameObject.Find("Content");
         gallery = GameObject.Find("Gallery");
-        content.transform.localScale = Vector3.zero;
+        settings = GameObject.Find("Settings");
+
+        content.transform.localScale = gallerySmall;
         gallery.transform.localScale = galleryOrigin;
-        gallery.transform.Find("GalleryWindow").localScale = Vector3.one;
+        settings.transform.localScale = gallerySmall;
 
-        planeL = GameObject.Find("Plane_left");
-        planeL.GetComponent<VideoPlayer>().SetDirectAudioMute(0, true);
-
+        GameObject.Find("Plane_L").GetComponent<VideoPlayer>().Stop(); //Õ£÷π ”∆µ
+        GameObject.Find("Plane_R").GetComponent<VideoPlayer>().Stop(); //Õ£÷π ”∆µ
     }
+
 }

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3794783392472113257}
   - component: {fileID: 2351635171431059025}
+  - component: {fileID: 4795244429283267383}
   m_Layer: 0
   m_Name: SwitchWindows
   m_TagString: Untagged
@@ -44,3 +45,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85660c3a00eb5934186905d8903bb5b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scaleDuration: 0.3
+--- !u!114 &4795244429283267383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1800997491415706548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fda0142b996c3d4abc8a95aaf76e601, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  windowUI: {fileID: 0}
+  Image: {fileID: 0}
+  shadow: {fileID: 0}
+  maskedViewport: {fileID: 0}
+  controls: {fileID: 0}
+  frame: {fileID: 0}
+  gridLayout: {fileID: 0}

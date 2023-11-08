@@ -14,39 +14,37 @@ public class ContentControl : MonoBehaviour
 {
     [Header("Photo")]
     public Texture2D img;
-    [Space]
-    [Header("Photo DeepMap")]
-    public Texture2D imgDeep;
+    private Texture2D thumbnail;
     [Space]
     [Header("Video")]
+    public bool isVideo = false;
     public string videoURL;
     //private float videosize_W, videosize_H;
     [Space]
     [Space]
     [Space]
     public GameObject planeObj_L;
-    public GameObject planeObj_R;
-
     public Material Plane_L;
+    [Space]
+    public GameObject planeObj_R;
     public Material Plane_R;
     [Space]
-    public GameObject InnerWallObj_L;
-    public GameObject InnerWallObj_R;
-
-    public Material InnerWall_L;
-    public Material InnerWall_R;
     [Space]
-    public Transform blurMask;
+    [Space]
+    public GameObject blurWall_L;
+    public Material blur_L;
+    [Space]
+    public GameObject blurWall_R;
+    public Material blur_R;
+    [Space]
+    [Space]
+    [Space]
     public RectTransform ViewWindow;
-    [Space]
-    public bool isVideo = false;
-    [Space]
-    public bool isDepth = false;
+    public ScrollRect scrollRect;
+    public GameObject videoController;
+    public RectTransform progressSlider;
 
-    [Header("DeepControl")]
-    [Range(0.0f, 2.5f)]
-    private float deepValue = 0;
-    public GameObject deepSlider;
+
 
     private List<GameObject> mediaObjs = new List<GameObject>();
     private int currentIndex = -1;
@@ -58,52 +56,36 @@ public class ContentControl : MonoBehaviour
 
     private void ChangeContent()
     {
+        if (mediaObjs.Count > 0) {
+            scrollRect.horizontalNormalizedPosition = (float)(currentIndex) / mediaObjs.Count;
+        }
+
         if (isVideo)  //VIDEO
         {
-            deepSlider.SetActive(false);
-            Plane_L.SetFloat("_Bulge", 0);
-            Plane_R.SetFloat("_Bulge", 0);
-
             PlayVideo(planeObj_L, videoURL);
             PlayVideo(planeObj_R, videoURL);
-            PlayVideo(InnerWallObj_L, videoURL);
-            PlayVideo(InnerWallObj_R, videoURL);
 
-            planeObj_L.GetComponent<VideoPlayer>().SetDirectAudioMute(0, false);
-            planeObj_L.GetComponent<VideoPlayer>().SetDirectAudioVolume(0, 1.0f); // 设置音轨的音量为最大
-
+            blurWall_L.SetActive(false);
+            blurWall_R.SetActive(false);
+            videoController.SetActive(true);
+            
         }
         else  //PHOTO
         {
             StopVideo(planeObj_L);
             StopVideo(planeObj_R);
-            StopVideo(InnerWallObj_L);
-            StopVideo(InnerWallObj_R);
+            videoController.SetActive(false);
 
-            Plane_L.SetTextureScale("_Texture2D", new Vector2(0.5f, 1.0f));
-            Resize(img.width, img.height);
+            ResizeWindow(img.width, img.height);
 
-            Plane_L.SetTexture("_Texture2D", img);
-            Plane_R.SetTexture("_Texture2D", img);
+            Plane_L.SetTexture("_MainTex", img);
+            Plane_R.SetTexture("_MainTex", img);
 
-            if (isDepth & imgDeep != null)
-            {
-                deepSlider.SetActive(true);
-                Plane_L.SetTexture("_Depth", imgDeep);
-                Plane_R.SetTexture("_Depth", imgDeep);
+            blurWall_L.SetActive(true);
+            blurWall_R.SetActive(true);
 
-                Plane_L.SetFloat("_Bulge", deepValue);
-                Plane_R.SetFloat("_Bulge", deepValue);
-            }
-            else
-            {
-                deepSlider.SetActive(false);
-                Plane_L.SetFloat("_Bulge", 0);
-                Plane_R.SetFloat("_Bulge", 0);
-            }
-
-            InnerWall_L.SetTexture("_Texture2D", img);
-            InnerWall_R.SetTexture("_Texture2D", img);
+            blur_L.SetTexture("_MainTex", thumbnail);
+            blur_R.SetTexture("_MainTex", thumbnail);
         }
     }
 
@@ -124,17 +106,18 @@ public class ContentControl : MonoBehaviour
 
         player.renderMode = VideoRenderMode.MaterialOverride;
         player.targetMaterialRenderer = texRenderer;
-        player.targetMaterialProperty = "_Texture2D";
+        player.targetMaterialProperty = "_MainTex";
     }
     
     private void PlayerPrepareCompleted(VideoPlayer player)
     {
-        Resize(player.width, player.height);
+        ResizeWindow(player.width, player.height);
+        progressSlider.sizeDelta = new Vector2(ViewWindow.sizeDelta.x * 1000 - 200, 16);
 
         preparedPlayersCount++;
         playersToPlay.Add(player);
 
-        if (preparedPlayersCount == 4) // 当四个视频都已经准备好
+        if (preparedPlayersCount == 2) // 当2个视频都已经准备好
         {
             foreach (var p in playersToPlay)
             {
@@ -156,38 +139,33 @@ public class ContentControl : MonoBehaviour
     
     void Update()
     {
-        // 比较当前帧与上一帧的变化
-        if (img != lastImg || deepValue != lastDeepValue || videoURL != lastVideoURL)
+        if (img != lastImg || videoURL != lastVideoURL) // 比较当前帧与上一帧的变化
         {
             ChangeContent();
 
             lastImg = img;
-            lastDeepValue = deepValue;
             lastVideoURL = videoURL;
         }
     }
 
-    public void foceUpdateContent()
+    public void forceUpdateContent()
     {
         ChangeContent();
     }
-    
+
     private Texture lastImg;
     private string lastVideoURL;
-    private float lastDeepValue;
 
-    public float DeepValue { get => deepValue; set => deepValue = value; }
     public int CurrentIndex { get => currentIndex; set => currentIndex = value; }
     public List<GameObject> MediaObjs { get => mediaObjs; set => mediaObjs = value; }
 
-    private void Resize(float img_width, float img_height) //设置图像显示的宽高比
+    private void ResizeWindow(float img_width, float img_height) //设置显示窗口的宽高比
     {
         Vector3 scaleValue;
 
         scaleValue = new Vector3((img_width / 2) / img_height, 1, 1);
         planeObj_L.transform.localScale = scaleValue;
         planeObj_R.transform.localScale = scaleValue;
-        blurMask.localScale = scaleValue;
         ViewWindow.sizeDelta = new Vector2(((img_width / 2) / img_height) * 0.8f, 0.8f);
     }
 
@@ -195,10 +173,11 @@ public class ContentControl : MonoBehaviour
     {
         img = image;
     }
-    public void Set_imgDeep(Texture2D image)
+    public void Set_thumbnail(Texture2D image)
     {
-        imgDeep = image;
+        thumbnail = image;
     }
+    
     public void Set_isVideo(bool IsVideo)
     {
         isVideo = IsVideo;

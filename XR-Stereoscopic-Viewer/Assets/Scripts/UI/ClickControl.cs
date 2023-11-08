@@ -9,11 +9,14 @@ using UnityEngine.Networking;
 
 public class ClickControl : MonoBehaviour
 {
-    private ContentControl contentControl;
     private GameObject content;
+    private ContentControl contentControl;
+
     private GameObject GalleryGrid;
 
-    private Texture2D downloadedTexture, downloadedTexture_D;
+    private Texture2D downloadedTexture;
+    private Texture2D thumbnail;
+
 
     private void Start()
     {
@@ -33,25 +36,15 @@ public class ClickControl : MonoBehaviour
         {
             contentControl.Set_isVideo(true);
             contentControl.Set_videoURL(url);
-            contentControl.foceUpdateContent();
         }
         else
         {
             contentControl.Set_isVideo(false);
-            if (gameObject.GetComponent<MediaAttributes>().HasDepth)
-            {
-                string url_D = mediaAttributes.DepthPath;
-                contentControl.isDepth = true;
-                StartCoroutine(DownloadTexture_D(url_D));
-            }
-            else
-            {
-                contentControl.isDepth = false;
-            }
+            
 
             // 应用新纹理
             StartCoroutine(DownloadTexture(url));
-        }
+            }
 
         //设置媒体index
         contentControl.MediaObjs.Clear(); //清空list
@@ -81,28 +74,18 @@ public class ClickControl : MonoBehaviour
             {
                 Destroy(downloadedTexture);
                 downloadedTexture = null;
+                Destroy(thumbnail);
+                thumbnail = null;
             }
             // 获取下载的纹理
             downloadedTexture = DownloadHandlerTexture.GetContent(uwr);
+            downloadedTexture.wrapMode = TextureWrapMode.Clamp;  // 设置wrapMode为Clamp
+            thumbnail = TextureUtilities.ResizeTexture(downloadedTexture, 20f); //缩小图片尺寸
+
             // 应用新纹理
             contentControl.Set_img(downloadedTexture);
-        }
-    }
-    private IEnumerator DownloadTexture_D(string Url) //加载深度图片
-    {
-        using (UnityWebRequest uwr = UnityWebRequestTexture.GetTexture(Url))
-        {
-            yield return uwr.SendWebRequest();
-            //删除旧纹理
-            if (downloadedTexture_D != null)
-            {
-                Destroy(downloadedTexture_D);
-                downloadedTexture_D = null;
-            }
-            // 获取下载的纹理
-            downloadedTexture_D = DownloadHandlerTexture.GetContent(uwr);
-            // 应用新纹理
-            contentControl.Set_imgDeep(downloadedTexture_D);
+
+            contentControl.Set_thumbnail(thumbnail);
         }
     }
 }

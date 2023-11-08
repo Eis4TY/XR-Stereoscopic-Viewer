@@ -4,17 +4,22 @@ using UnityEngine.UI;
 using UnityEngine.Networking;
 using UnityEngine.Video;
 using System.IO;
-using Meta.Voice.Hub;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
+using UnityEngine.Android;
+
+
 
 public class ImageLoader : MonoBehaviour
 {
-    public Texture2D videoPlaceholder;
+    public Texture2D videoPlaceholder; //视频缩略图临时占位图
     public RectTransform container; // 你的UI容器，例如一个ScrollRect的Content
     public GameObject imagePrefab;    // 一个RawImage预制体，用于显示图片
     public bool ReadyToBuild = true;
+    [Space]
+    public Texture2D img_guidance;
+    public Texture2D img_default;
 
     private string folderPath;
     private VideoPlayer videoPlayer; // 视频播放器
@@ -30,26 +35,19 @@ public class ImageLoader : MonoBehaviour
         videoPlayer = gameObject.AddComponent<VideoPlayer>();
         videoPlayer.targetTexture = videoTexture;
 
+        if (ReadyToBuild) //安卓打包
+        {
+            folderPath = "/sdcard/Pictures/3dMedia";
 
-        if (ReadyToBuild)
-        {
-            folderPath = Application.persistentDataPath + "/Media/"; //安卓打包
+            RequestPermissions(); //请求写入权限
         }
-        else
+        else //编辑器调试
         {
-            folderPath = Application.dataPath + "/Media/"; //编辑器调试
-        }
-        LoadAllImages();
-    }
-    /*
-    private void Update()
-    {
-        if (OVRInput.Get(OVRInput.Button.One))
-        {
+            folderPath = Application.dataPath + "/Media/"; 
             LoadAllImages();
         }
     }
-    */
+
     private void LoadAllImages()
     {
         string[] imageFiles = Directory.GetFiles(folderPath, "*.*", SearchOption.AllDirectories)
@@ -59,7 +57,6 @@ public class ImageLoader : MonoBehaviour
         StartCoroutine(LoadImagesInBatches(imageFiles, 2)); // 以2个文件为一批进行加载
 
     }
-
     IEnumerator LoadImagesInBatches(string[] imageFiles, int batchSize)
     {
         int currentBatch = 0;
@@ -71,20 +68,15 @@ public class ImageLoader : MonoBehaviour
             {
                 string imagePath = imageFiles[i];
                 string extension = Path.GetExtension(imagePath).ToLower();
-                string filenameWithoutExtension = Path.GetFileNameWithoutExtension(imagePath);
 
                 if (extension == ".png" || extension == ".jpg")
                 {
-                    // 判断是否是深度图
-                    if (!filenameWithoutExtension.EndsWith("_D"))
-                    {
-                        StartCoroutine(LoadImage(imagePath, imageFiles));
-                    }
+                    yield return StartCoroutine(LoadImage(imagePath));
                 }
                 else if (extension == ".mp4")
                 {
-                    //StartCoroutine(LoadThumbnailFromVideo(imagePath));
                     AddVideoToQueue(imagePath);
+                    // 可以选择在此处添加视频加载逻辑
                 }
             }
             currentBatch++;
@@ -93,7 +85,7 @@ public class ImageLoader : MonoBehaviour
     }
 
     //抓取图片
-    private IEnumerator LoadImage(string imagePath,  string[] allImages)
+    private IEnumerator LoadImage(string imagePath)
     {
         UnityWebRequest uwr = UnityWebRequestTexture.GetTexture("file://" + imagePath);
         yield return uwr.SendWebRequest();
@@ -101,28 +93,15 @@ public class ImageLoader : MonoBehaviour
         if (uwr.result != UnityWebRequest.Result.ConnectionError && uwr.result != UnityWebRequest.Result.DataProcessingError)
         {
             Texture2D RawTexture = DownloadHandlerTexture.GetContent(uwr);
-            Texture2D texture = TextureUtilities.ResizeTexture(RawTexture, 256f);
+            Texture2D texture = TextureUtilities.ResizeTexture(RawTexture, 205f); //缩小图片尺寸
             Destroy(RawTexture);
 
             GameObject imageInstance = Instantiate<GameObject>(imagePrefab, container);
             imageInstance.GetComponent<MediaAttributes>().ImagePath = "file://" + imagePath;
             imageInstance.GetComponent<MediaAttributes>().IsVideo = false;
 
-            // 寻找对应的深度图
-            string depthImagePath = null;
-            string imageNameWithDepth = Path.GetFileNameWithoutExtension(imagePath) + "_D" + Path.GetExtension(imagePath);
-            if (System.Array.Exists(allImages, item => item.EndsWith(imageNameWithDepth)))
-            {
-                imageInstance.GetComponent<MediaAttributes>().HasDepth = true;
-                depthImagePath = Path.Combine(folderPath, imageNameWithDepth);
-                imageInstance.GetComponent<MediaAttributes>().DepthPath = "file://" + depthImagePath;
-            }
-            else
-            {
-                imageInstance.GetComponent<MediaAttributes>().HasDepth = false;
-            }
 
-            imageInstance.transform.Find("Time").GetComponent<TextMeshProUGUI>().text = " "; //显示视频时长
+            imageInstance.transform.Find("Time").GetComponent<TextMeshProUGUI>().text = " "; //照片不显示视频时长
 
             RawImage childRawImage = imageInstance.transform.Find("Img").GetComponent<RawImage>(); 
             childRawImage.uvRect = ResizeTexUVRect(childRawImage, texture);
@@ -144,7 +123,7 @@ public class ImageLoader : MonoBehaviour
             StartCoroutine(ProcessVideos());
         }
     }
-    private IEnumerator ProcessVideos()
+    private IEnumerator ProcessVideos() //视频加载流
     {
         isProcessing = true;
 
@@ -156,20 +135,18 @@ public class ImageLoader : MonoBehaviour
 
         isProcessing = false;
     }
-    private IEnumerator LoadThumbnailFromVideo(string videoPath)
+    private IEnumerator LoadThumbnailFromVideo(string videoPath) //视频缩略图
     {
         //创建实例
         GameObject imageInstance = Instantiate<GameObject>(imagePrefab, container);
         imageInstance.GetComponent<MediaAttributes>().ImagePath = "file://" + videoPath;
         imageInstance.GetComponent<MediaAttributes>().IsVideo = true;
 
-
         RawImage childRawImage = imageInstance.transform.Find("Img").GetComponent<RawImage>();
 
         if (childRawImage != null)
         {
             childRawImage.texture = videoPlaceholder;
-            //childRawImage.uvRect = ResizeTexUVRect(childRawImage, videoPlaceholder);
         }
 
         //加载视频
@@ -247,5 +224,85 @@ public class ImageLoader : MonoBehaviour
             return newUVRect;
         }
         return new Rect(0, 0, 1, 1);
+    }
+
+    void RequestPermissions() //检查写入外部存储的权限
+    {
+        if (!Permission.HasUserAuthorizedPermission(Permission.ExternalStorageWrite))
+        {
+            Permission.RequestUserPermission(Permission.ExternalStorageWrite);
+        }
+        else
+        {
+            OnPermissionGranted();
+        }
+    }
+
+    void OnApplicationFocus(bool hasFocus) //重新获得焦点时
+    {
+        if (hasFocus && ReadyToBuild)
+        {
+            RequestPermissions(); //再检查权限
+        }
+    }
+
+    void OnPermissionGranted() //已获得权限，开始写入
+    {
+        if (!Directory.Exists(folderPath)) //文件夹路径不存在
+        {
+            Directory.CreateDirectory(folderPath); //创建文件夹
+            SaveTextureToDisk(img_guidance, "/sdcard/Pictures/3dMedia/img_guidance.png");
+            SaveTextureToDisk(img_default, "/sdcard/Pictures/3dMedia/img_default.png");
+            LoadAllImages();
+        }
+        else
+        {
+            string[] entries = Directory.GetFileSystemEntries(folderPath);
+            if (entries.Length == 0) //文件夹为空
+            {
+                SaveTextureToDisk(img_guidance, "/sdcard/Pictures/3dMedia/img_guidance.png");
+                SaveTextureToDisk(img_default, "/sdcard/Pictures/3dMedia/img_default.png");
+                LoadAllImages();
+            }
+            else
+            {
+                LoadAllImages();
+            }
+        }
+
+    }
+
+    void SaveTextureToDisk(Texture2D texture, string filePath) //保存图片到本机
+    {
+        try
+        {
+            // 获取原始纹理的像素数据
+            Color[] pixels = texture.GetPixels();
+
+            // 创建新的 Texture2D 对象
+            Texture2D readableTexture = new Texture2D(texture.width, texture.height, TextureFormat.RGBA32, false);
+
+            // 将像素数据设置到新的 Texture2D 对象中
+            readableTexture.SetPixels(pixels);
+            readableTexture.Apply();
+
+
+            Graphics.CopyTexture(texture, readableTexture);
+            byte[] textureBytes = readableTexture.EncodeToPNG();
+            if (textureBytes != null)
+            {
+                string directoryPath = Path.GetDirectoryName(filePath);
+                if (!Directory.Exists(directoryPath))
+                {
+                    Directory.CreateDirectory(directoryPath);
+                }
+
+                File.WriteAllBytes(filePath, textureBytes);
+            }
+        }
+        catch (System.Exception e)
+        {
+            Debug.LogError("Exception while saving texture: " + e.Message);
+        }
     }
 }

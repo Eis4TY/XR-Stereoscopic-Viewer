@@ -7,7 +7,7 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Scenes/StereoImages.unity
-    guid: 3d92f0196c5918f4e9b43ff2e8c16f4e
+    guid: 6460fda23ce83054fa00f758a19d9c7e
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 9a5d462975044044f9f6da6fc0eab0e9, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 965a7fcec416a7046a085a37d34a2d3c, type: 2}

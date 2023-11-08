@@ -1,18 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-3633542707713143535
-MonoBehaviour:
-  m_ObjectHideFlags: 11
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 639247ca83abc874e893eb93af2b5e44, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  version: 0
 --- !u!21 &2100000
 Material:
   serializedVersion: 8
@@ -21,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Plane_R
-  m_Shader: {fileID: 4800000, guid: 2c24507cf074a074ebe9f70b7e4b75c3, type: 3}
+  m_Shader: {fileID: 4800000, guid: 67e0ad27f89c0ce4cb09f6cb60fc8d43, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -29,61 +16,29 @@ Material:
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2000
-  stringTagMap:
-    RenderType: Opaque
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
   disabledShaderPasses: []
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _BumpMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
+    - _LeftTex:
+        m_Texture: {fileID: 2800000, guid: 06893b6583d27ea45adee7ed10e816c7, type: 3}
+        m_Scale: {x: 0.5, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _Depth:
-        m_Texture: {fileID: 2800000, guid: 49a4685ece3494346b4382c963d289dc, type: 3}
-        m_Scale: {x: 0.5, y: 1}
-        m_Offset: {x: 0.5, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 06b4fc896fce7934a99541797078c38f, type: 3}
-        m_Scale: {x: 0.5, y: 1}
-        m_Offset: {x: 0.5, y: 0}
-    - _Texture2D:
         m_Texture: {fileID: 2800000, guid: 06893b6583d27ea45adee7ed10e816c7, type: 3}
         m_Scale: {x: 0.5, y: 1}
         m_Offset: {x: 0.5, y: 0}
-    - _depth:
-        m_Texture: {fileID: 2800000, guid: fad99de18f4be7045a5e2f3e46fda857, type: 3}
-        m_Scale: {x: 0.5, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _pic:
-        m_Texture: {fileID: 2800000, guid: 4bbe2f4b9db7d2a4c8357b61384e341e, type: 3}
+    - _RightTex:
+        m_Texture: {fileID: 2800000, guid: 986cb023b07d3dc4988850bf8c8f1116, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - Vector1_9fa47fe26092452f9ee67757086d1977: 2
-    - _BUILTIN_AlphaClip: 0
-    - _BUILTIN_Blend: 0
-    - _BUILTIN_CullMode: 2
-    - _BUILTIN_DstBlend: 0
-    - _BUILTIN_QueueControl: 0
-    - _BUILTIN_QueueOffset: 0
-    - _BUILTIN_SrcBlend: 1
-    - _BUILTIN_Surface: 0
-    - _BUILTIN_ZTest: 4
-    - _BUILTIN_ZWrite: 1
-    - _BUILTIN_ZWriteControl: 0
-    - _Bulge: 0
-    - _BumpStrength: 1
-    - _DepthValue: 6
     - _ID: 1
+    - _IPD: 0.11701735
     - _SComp: 3
-    - _scale: 0
-    m_Colors:
-    - _BumpMapOffset: {r: 0, g: 0, b: 0, a: 0}
-    - _BumpMapTiling: {r: 1, g: 1, b: 0, a: 0}
-    - _MainTexOffset: {r: 0, g: 0, b: 0, a: 0}
-    - _MainTexTiling: {r: 1, g: 1, b: 0, a: 0}
+    m_Colors: []
   m_BuildTextureStacks: []
