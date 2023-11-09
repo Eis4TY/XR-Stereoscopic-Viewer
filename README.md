@@ -27,7 +27,7 @@ Bring the experience of the Photos App in Apple Vision Pro to the META Quest ser
 ## Download
 
 - Download Quest version [APK](https://github.com/Eis4TY/XR-Stereoscopic-Viewer/releases).
-- Download PICO version APK. (coming soon)
+- Download PICO version APK. (在应用商店搜索：空间西洋镜)
 
 ## Resource Sharing
 
