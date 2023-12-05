@@ -36,7 +36,7 @@ public class WindowSize_Adjustment : MonoBehaviour
     {
         if (valueText) // 检查是否有TMP文本组件被引用
         {
-            valueText.text = "Size: " + value.ToString("0"); // 这里将数值保留两位小数，你可以按需修改
+            valueText.text = "Size: " + value.ToString("1"); // 这里将数值保留两位小数，你可以按需修改
         }
     }
 }

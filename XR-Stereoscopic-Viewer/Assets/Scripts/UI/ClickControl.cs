@@ -17,6 +17,8 @@ public class ClickControl : MonoBehaviour
     private Texture2D downloadedTexture;
     private Texture2D thumbnail;
 
+    private IPD_Adjustment ipd_Adjustment;
+
 
     private void Start()
     {
@@ -24,12 +26,18 @@ public class ClickControl : MonoBehaviour
         contentControl = content.GetComponent<ContentControl>();
 
         GalleryGrid = GameObject.Find("Grid");
+
+        ipd_Adjustment = GameObject.Find("AppFunctions").GetComponent<IPD_Adjustment>();
     }
 
 
     public void SetContent()
     {
         MediaAttributes mediaAttributes = this.GetComponent<MediaAttributes>();
+        ipd_Adjustment.CurrentImage = mediaAttributes;
+        ipd_Adjustment.targetSlider.value = mediaAttributes.ImageIPD;
+        ipd_Adjustment.ChangeImgIPD(mediaAttributes.ImageIPD);
+
         string url = mediaAttributes.ImagePath;
         
         if (mediaAttributes.IsVideo)

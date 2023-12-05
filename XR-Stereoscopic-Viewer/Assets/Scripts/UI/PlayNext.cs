@@ -10,6 +10,8 @@ public class PlayNext : MonoBehaviour
     public ContentControl contentControl;
     private Texture2D downloadedTexture, thumbnail;
 
+    public IPD_Adjustment ipd_Adjustment;
+
     public void LastMedia() //иор╩уе
     {
         if (contentControl.MediaObjs.Count > 0)
@@ -24,6 +26,11 @@ public class PlayNext : MonoBehaviour
                 lastIndex = contentControl.CurrentIndex - 1;
             }
             MediaAttributes currentMedia = contentControl.MediaObjs[lastIndex].transform.GetComponent<MediaAttributes>();
+
+            ipd_Adjustment.CurrentImage = currentMedia;
+            ipd_Adjustment.targetSlider.value = currentMedia.ImageIPD;
+            ipd_Adjustment.ChangeImgIPD(currentMedia.ImageIPD);
+
             SetContent(currentMedia);
             contentControl.CurrentIndex = lastIndex;
         }
@@ -35,6 +42,11 @@ public class PlayNext : MonoBehaviour
         {
             int nextIndex = (contentControl.CurrentIndex + 1) % contentControl.MediaObjs.Count;
             MediaAttributes currentMediaAttributes = contentControl.MediaObjs[nextIndex].transform.GetComponent<MediaAttributes>();
+
+            ipd_Adjustment.CurrentImage = currentMediaAttributes;
+            ipd_Adjustment.targetSlider.value = currentMediaAttributes.ImageIPD;
+            ipd_Adjustment.ChangeImgIPD(currentMediaAttributes.ImageIPD);
+
             SetContent(currentMediaAttributes);
             contentControl.CurrentIndex = nextIndex;
         }
